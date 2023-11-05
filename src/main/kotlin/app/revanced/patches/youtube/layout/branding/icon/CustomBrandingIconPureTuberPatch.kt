@@ -35,7 +35,7 @@ import app.revanced.util.resources.ResourceHelper.updatePatchStatusIcon
     ]
 )
 @Suppress("unused")
-object CustomBrandingIconRevancifyBluePatch : ResourcePatch() {
+object CustomBrandingIconPureTuberPatch : ResourcePatch() {
     override fun execute(context: ResourceContext) {
 
         context.customIcon("pure-tuber")
