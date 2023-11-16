@@ -9,7 +9,7 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.music.player.replace.fingerprints.CastButtonContainerFingerprint
-import app.revanced.patches.music.player.replace.fingerprints.PlaybackStartDescriptorFingerprint
+import app.revanced.patches.music.utils.playerresponse.PlayerResponsePatch
 import app.revanced.patches.music.utils.resourceid.SharedResourceIdPatch
 import app.revanced.patches.music.utils.resourceid.SharedResourceIdPatch.PlayerCastMediaRouteButton
 import app.revanced.patches.music.utils.settings.SettingsPatch
@@ -32,6 +32,7 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
     name = "Replace cast button",
     description = "Replace the cast button in the player with the open music button.",
     dependencies = [
+        PlayerResponsePatch::class,
         SettingsPatch::class,
         SharedResourceIdPatch::class,
         VideoTypeHookPatch::class
@@ -42,8 +43,8 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
             [
                 "6.15.52",
                 "6.20.51",
-                "6.23.55",
-                "6.25.53"
+                "6.26.51",
+                "6.27.53"
             ]
         )
     ],
@@ -51,10 +52,7 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 )
 @Suppress("unused")
 object ReplaceCastButtonPatch : BytecodePatch(
-    setOf(
-        CastButtonContainerFingerprint,
-        PlaybackStartDescriptorFingerprint
-    )
+    setOf(CastButtonContainerFingerprint)
 ) {
     override fun execute(context: BytecodeContext) {
 
@@ -96,21 +94,11 @@ object ReplaceCastButtonPatch : BytecodePatch(
             }
         } ?: throw CastButtonContainerFingerprint.exception
 
-        PlaybackStartDescriptorFingerprint.result?.let {
-            it.mutableMethod.apply {
-                val videoIdRegister = 1
-                val playlistIdRegister = 4
-                val playlistIndexRegister = 5
-
-                addInstruction(
-                    0,
-                    "invoke-static {p$videoIdRegister, p$playlistIdRegister, p$playlistIndexRegister}, " +
-                            "$MUSIC_UTILS_PATH/CheckMusicVideoPatch;" +
-                            "->" +
-                            "playbackStart(Ljava/lang/String;Ljava/lang/String;I)V"
-                )
-            }
-        } ?: throw PlaybackStartDescriptorFingerprint.exception
+        PlayerResponsePatch.injectPlaylistCall(
+            "$MUSIC_UTILS_PATH/CheckMusicVideoPatch;" +
+                    "->" +
+                    "playbackStart(Ljava/lang/String;Ljava/lang/String;IZ)V"
+        )
 
         arrayOf(
             ResourceUtils.ResourceGroup(

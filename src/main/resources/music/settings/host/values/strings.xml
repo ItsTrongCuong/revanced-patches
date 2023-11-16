@@ -50,7 +50,7 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_enable_old_style_library_shelf_title">Enable old style library shelf</string>
     <string name="revanced_enable_old_style_mini_player_summary">Return the mini players to old style.</string>
     <string name="revanced_enable_old_style_mini_player_title">Enable old style mini player</string>
-    <string name="revanced_enable_opus_codec_summary">Enable 250/251 opus codec when playing audio.</string>
+    <string name="revanced_enable_opus_codec_summary">Apply opus audio codec instead of mp4a audio codec.</string>
     <string name="revanced_enable_opus_codec_title">Enable opus codec</string>
     <string name="revanced_enable_save_playback_speed_summary">Save the playback speed value whenever you change the playback speed.</string>
     <string name="revanced_enable_save_playback_speed_title">Enable save playback speed</string>
@@ -136,6 +136,7 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_hide_upgrade_button_title">Hide upgrade button</string>
     <string name="revanced_hook_action_bar_download_summary">Replaces the offline download button with an external download button.</string>
     <string name="revanced_hook_action_bar_download_title">Hook download button</string>
+    <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_playlist_dismiss">Already playing official music source.</string>
     <string name="revanced_playlist_error">Official music source not available.</string>
     <string name="revanced_reboot_first_run">Restart to load the layout normally</string>
@@ -159,10 +160,13 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_ryd_enabled_summary">Shows the dislike count of videos.</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">Dislikes not available (client API limit reached).</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Hidden</string>
-    <string name="revanced_save_playback_speed">Changing default speed to:</string>
-    <string name="revanced_save_video_quality_mobile">Changing default mobile data quality to:</string>
+    <string name="revanced_sanitize_sharing_links_summary">Removes tracking query parameters from the URLs when sharing links.</string>
+    <string name="revanced_sanitize_sharing_links_title">Sanitize sharing links</string>
+    <string name="revanced_save_playback_speed" formatted="false">Changing default speed to %s.</string>
+    <string name="revanced_save_video_quality_mobile" formatted="false">Changing default mobile data quality to %s.</string>
     <string name="revanced_save_video_quality_none">Failed to set quality.</string>
-    <string name="revanced_save_video_quality_wifi">Changing default Wi-Fi quality to:</string>
+    <string name="revanced_save_video_quality_wifi" formatted="false">Changing default Wi-Fi quality to %s.</string>
+    <string name="revanced_share_copy_settings_success">Settings copied to clipboard.</string>
     <string name="revanced_spoof_app_version_summary">"Spoofing the client version to the old version.
 
 • This will change the appearance of the app, but unknown side effects may occur.
@@ -194,7 +198,7 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
 
     <string name="sb_diff_segments">Change segment behavior</string>
     <string name="sb_segments_sponsor">Sponsor</string>
-    <string name="sb_segments_sponsor_sum">Paid promotion, paid referrals and direct advertisements. Not for self-promotion or free shout-outs to causes/creators/websites/products they like.</string>
+    <string name="sb_segments_sponsor_sum">Paid promotion, paid referrals and direct advertisements. Not for self-promotion or free shout-outs to causes / creators / websites / products they like.</string>
     <string name="sb_segments_selfpromo">Unpaid / Self Promotion</string>
     <string name="sb_segments_selfpromo_sum">Similar to \'Sponsor\' except for unpaid or self promotion. Includes sections about merchandise, donations, or information about who they collaborated with.</string>
     <string name="sb_segments_interaction">Interaction Reminder (Subscribe)</string>
@@ -203,7 +207,7 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="sb_segments_intro_sum">An interval without actual content. Could be a pause, static frame, or repeating animation. Does not include transitions containing information.</string>
     <string name="sb_segments_outro">Endcards / Credits</string>
     <string name="sb_segments_outro_sum">Credits or when the YouTube endcards appear. Not for conclusions with information.</string>
-    <string name="sb_segments_preview">Preview / Recap</string>
+    <string name="sb_segments_preview">Preview / Recap / Hook</string>
     <string name="sb_segments_preview_sum">Collection of clips that show what is coming up or what happened in the video or in other videos of a series, where all information is repeated elsewhere.</string>
     <string name="sb_segments_filler">Filler Tangent / Jokes</string>
     <string name="sb_segments_filler_sum">Tangential scenes added only for filler or humor that are not required to understand the main content of the video. Does not include segments providing context or background details.</string>

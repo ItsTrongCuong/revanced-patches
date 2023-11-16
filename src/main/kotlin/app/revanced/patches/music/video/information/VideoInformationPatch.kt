@@ -12,6 +12,8 @@ import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patches.music.utils.fingerprints.SeekBarConstructorFingerprint
 import app.revanced.patches.music.utils.resourceid.SharedResourceIdPatch
+import app.revanced.patches.music.video.information.fingerprints.BackgroundPlaybackVideoIdFingerprint
+import app.revanced.patches.music.video.information.fingerprints.BackgroundPlaybackVideoIdParentFingerprint
 import app.revanced.patches.music.video.information.fingerprints.PlayerControllerSetTimeReferenceFingerprint
 import app.revanced.patches.music.video.information.fingerprints.VideoEndFingerprint
 import app.revanced.patches.music.video.information.fingerprints.VideoIdParentFingerprint
@@ -30,6 +32,7 @@ import com.android.tools.smali.dexlib2.util.MethodUtil
 @Patch(dependencies = [SharedResourceIdPatch::class])
 object VideoInformationPatch : BytecodePatch(
     setOf(
+        BackgroundPlaybackVideoIdParentFingerprint,
         PlayerControllerSetTimeReferenceFingerprint,
         SeekBarConstructorFingerprint,
         VideoEndFingerprint,
@@ -39,18 +42,30 @@ object VideoInformationPatch : BytecodePatch(
     private const val INTEGRATIONS_CLASS_DESCRIPTOR =
         "$MUSIC_VIDEO_PATH/VideoInformation;"
 
+    private var backgroundPlaybackInsertIndex = 0
     private var offset = 0
     private var playerInitInsertIndex = 4
     private var timeInitInsertIndex = 2
     private var videoIdIndex = 0
 
+    private var backgroundPlaybackVideoIdRegister = 0
     private var videoIdRegister: Int = 0
 
+    private lateinit var backgroundPlaybackMethod: MutableMethod
     private lateinit var videoIdMethod: MutableMethod
     private lateinit var playerInitMethod: MutableMethod
     private lateinit var timeMethod: MutableMethod
 
     lateinit var rectangleFieldName: String
+
+    internal fun injectBackgroundPlaybackCall(
+        methodDescriptor: String
+    ) {
+        backgroundPlaybackMethod.addInstructions(
+            backgroundPlaybackInsertIndex, // move-result-object offset
+            "invoke-static {v$backgroundPlaybackVideoIdRegister}, $methodDescriptor"
+        )
+    }
 
     /**
      * Adds an invoke-static instruction, called with the new id when the video changes
@@ -178,6 +193,27 @@ object VideoInformationPatch : BytecodePatch(
          * Set current video time
          */
         videoTimeHook(INTEGRATIONS_CLASS_DESCRIPTOR, "setVideoTime")
+
+
+        /**
+         * Inject call for background playback video id
+         */
+        BackgroundPlaybackVideoIdParentFingerprint.result?.let { parentResult ->
+            BackgroundPlaybackVideoIdFingerprint.also {
+                it.resolve(
+                    context,
+                    parentResult.classDef
+                )
+            }.result?.let {
+                it.mutableMethod.apply {
+                    backgroundPlaybackMethod = this
+                    backgroundPlaybackInsertIndex = it.scanResult.patternScanResult!!.endIndex
+                    backgroundPlaybackVideoIdRegister =
+                        getInstruction<OneRegisterInstruction>(backgroundPlaybackInsertIndex).registerA
+                    backgroundPlaybackInsertIndex++
+                }
+            } ?: throw BackgroundPlaybackVideoIdFingerprint.exception
+        } ?: throw BackgroundPlaybackVideoIdParentFingerprint.exception
 
 
         /**

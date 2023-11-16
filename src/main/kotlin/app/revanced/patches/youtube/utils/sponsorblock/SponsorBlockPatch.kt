@@ -34,7 +34,10 @@ import app.revanced.util.resources.ResourceUtils.copyXmlNode
                 "18.37.36",
                 "18.38.44",
                 "18.39.41",
-                "18.40.34"
+                "18.40.34",
+                "18.41.39",
+                "18.42.41",
+                "18.43.45"
             ]
         )
     ]
@@ -53,13 +56,21 @@ object SponsorBlockPatch : ResourcePatch() {
         /**
          * merge SponsorBlock drawables to main drawables
          */
+        arrayOf(
+            ResourceUtils.ResourceGroup(
+                "layout",
+                "inline_sponsor_overlay.xml",
+                "skip_sponsor_button.xml"
+            )
+        ).forEach { resourceGroup ->
+            context.copyResources("youtube/sponsorblock/shared", resourceGroup)
+        }
+
         if (OutlineIcon == true) {
             arrayOf(
                 ResourceUtils.ResourceGroup(
                     "layout",
-                    "inline_sponsor_overlay.xml",
-                    "new_segment.xml",
-                    "skip_sponsor_button.xml"
+                    "new_segment.xml"
                 ),
                 ResourceUtils.ResourceGroup(
                     "drawable",
@@ -80,9 +91,7 @@ object SponsorBlockPatch : ResourcePatch() {
             arrayOf(
                 ResourceUtils.ResourceGroup(
                     "layout",
-                    "inline_sponsor_overlay.xml",
-                    "new_segment.xml",
-                    "skip_sponsor_button.xml"
+                    "new_segment.xml"
                 ),
                 ResourceUtils.ResourceGroup(
                     "drawable",

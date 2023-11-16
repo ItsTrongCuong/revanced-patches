@@ -32,7 +32,10 @@ import app.revanced.util.integrations.Constants.COMPONENTS_PATH
                 "18.37.36",
                 "18.38.44",
                 "18.39.41",
-                "18.40.34"
+                "18.40.34",
+                "18.41.39",
+                "18.42.41",
+                "18.43.45"
             ]
         )
     ]
@@ -44,6 +47,7 @@ object LayoutComponentsPatch : BytecodePatch() {
         LithoFilterPatch.addFilter("$COMPONENTS_PATH/CommunityPostFilter;")
         LithoFilterPatch.addFilter("$COMPONENTS_PATH/LayoutComponentsFilter;")
         LithoFilterPatch.addFilter("$COMPONENTS_PATH/LayoutComponentsUniversalFilter;")
+        LithoFilterPatch.addFilter("$COMPONENTS_PATH/LowViewsFilter;")
 
         /**
          * Add settings

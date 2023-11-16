@@ -12,7 +12,6 @@ import app.revanced.patches.youtube.player.suggestedvideooverlay.fingerprints.Co
 import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch
 import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch.CoreContainer
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.patches.youtube.utils.videoid.general.VideoIdPatch
 import app.revanced.util.bytecode.getWideLiteralIndex
 import app.revanced.util.integrations.Constants.PLAYER
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
@@ -23,8 +22,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
     description = "Hide the suggested video overlay to play next.",
     dependencies = [
         SettingsPatch::class,
-        SharedResourceIdPatch::class,
-        VideoIdPatch::class
+        SharedResourceIdPatch::class
     ],
     compatiblePackages = [
         CompatiblePackage(
@@ -43,7 +41,10 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
                 "18.37.36",
                 "18.38.44",
                 "18.39.41",
-                "18.40.34"
+                "18.40.34",
+                "18.41.39",
+                "18.42.41",
+                "18.43.45"
             ]
         )
     ]
@@ -73,13 +74,6 @@ object SuggestedVideoOverlayPatch : BytecodePatch(
             }
         } ?: throw CoreConatinerBuilderFingerprint.exception
 
-        VideoIdPatch.videoEndMethod.apply {
-            addInstruction(
-                implementation!!.instructions.size - 1,
-                "invoke-static {},$PLAYER->hideSuggestedVideoOverlay()V"
-            )
-        }
-
         /**
          * Add settings
          */
@@ -94,7 +88,4 @@ object SuggestedVideoOverlayPatch : BytecodePatch(
         SettingsPatch.updatePatchStatus("Hide suggested video overlay")
 
     }
-
-    private const val INTEGRATIONS_CLASS_DESCRIPTOR =
-        "$PLAYER->hideSuggestedVideoOverlay(Landroid/view/ViewGroup;)V"
 }
