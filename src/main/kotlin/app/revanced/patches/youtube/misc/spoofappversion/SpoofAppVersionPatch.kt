@@ -5,10 +5,10 @@ import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.shared.patch.versionspoof.AbstractVersionSpoofPatch
+import app.revanced.patches.youtube.utils.integrations.Constants.MISC_PATH
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch.contexts
-import app.revanced.util.integrations.Constants.MISC_PATH
-import app.revanced.util.resources.ResourceUtils.copyXmlNode
+import app.revanced.util.copyXmlNode
 import org.w3c.dom.Element
 
 @Patch(
@@ -35,7 +35,9 @@ import org.w3c.dom.Element
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -60,13 +62,22 @@ object SpoofAppVersionPatch : AbstractVersionSpoofPatch(
                 )
             )
 
-            if (SettingsPatch.upward1841) {
+            if (SettingsPatch.upward1839) {
                 contexts.appendChild(
                     arrayOf(
-                        "revanced_spoof_app_version_target_entry" to "@string/revanced_spoof_app_version_target_entry_18_40_34",
-                        "revanced_spoof_app_version_target_entry_value" to "18.40.34"
+                        "revanced_spoof_app_version_target_entry" to "@string/revanced_spoof_app_version_target_entry_18_38_45",
+                        "revanced_spoof_app_version_target_entry_value" to "18.38.45"
                     )
                 )
+
+                if (SettingsPatch.upward1841) {
+                    contexts.appendChild(
+                        arrayOf(
+                            "revanced_spoof_app_version_target_entry" to "@string/revanced_spoof_app_version_target_entry_18_40_34",
+                            "revanced_spoof_app_version_target_entry_value" to "18.40.34"
+                        )
+                    )
+                }
             }
         }
 

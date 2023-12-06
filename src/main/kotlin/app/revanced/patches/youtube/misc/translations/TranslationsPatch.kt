@@ -1,11 +1,10 @@
 package app.revanced.patches.youtube.misc.translations
 
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import app.revanced.patches.shared.patch.translations.AbstractTranslationsPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.resources.ResourceHelper.addTranslations
 
 @Patch(
     name = "Translations",
@@ -31,22 +30,17 @@ import app.revanced.util.resources.ResourceHelper.addTranslations
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
 )
 @Suppress("unused")
-object TranslationsPatch : ResourcePatch() {
-    override fun execute(context: ResourceContext) {
-
-        context.addTranslations("youtube", LANGUAGE_LIST)
-
-        SettingsPatch.updatePatchStatus("Translations")
-
-    }
-
-    private val LANGUAGE_LIST = arrayOf(
+object TranslationsPatch : AbstractTranslationsPatch(
+    "youtube",
+    arrayOf(
         "ar",
         "bg-rBG",
         "bn",
@@ -71,4 +65,10 @@ object TranslationsPatch : ResourcePatch() {
         "zh-rCN",
         "zh-rTW"
     )
+) {
+    override fun execute(context: ResourceContext) {
+        super.execute(context)
+
+        SettingsPatch.updatePatchStatus("Translations")
+    }
 }

@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.general.mixplaylists
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -10,14 +9,13 @@ import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.smali.ExternalLabel
-import app.revanced.patches.youtube.general.mixplaylists.fingerprints.BottomPanelOverlayTextFingerprint
 import app.revanced.patches.youtube.general.mixplaylists.fingerprints.ElementParserFingerprint
 import app.revanced.patches.youtube.general.mixplaylists.fingerprints.EmptyFlatBufferFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.litho.LithoFilterPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.bytecode.getStringIndex
-import app.revanced.util.integrations.Constants.COMPONENTS_PATH
-import app.revanced.util.integrations.Constants.GENERAL
+import app.revanced.util.exception
+import app.revanced.util.getStringInstructionIndex
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
@@ -49,7 +47,9 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -57,28 +57,11 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 @Suppress("unused")
 object MixPlaylistsPatch : BytecodePatch(
     setOf(
-        BottomPanelOverlayTextFingerprint,
         ElementParserFingerprint,
         EmptyFlatBufferFingerprint
     )
 ) {
     override fun execute(context: BytecodeContext) {
-
-        /**
-         * Hide MixPlaylists when tablet UI is turned on
-         * Required only for RVX Patches
-         */
-        BottomPanelOverlayTextFingerprint.result?.let {
-            it.mutableMethod.apply {
-                val insertIndex = it.scanResult.patternScanResult!!.endIndex
-                val insertRegister = getInstruction<TwoRegisterInstruction>(insertIndex).registerA
-
-                addInstruction(
-                    insertIndex,
-                    "invoke-static {v$insertRegister}, $GENERAL->hideMixPlaylists(Landroid/view/View;)V"
-                )
-            }
-        } ?: throw BottomPanelOverlayTextFingerprint.exception
 
         /**
          * Separated from bytebuffer patch
@@ -97,7 +80,8 @@ object MixPlaylistsPatch : BytecodePatch(
                 val insertIndex = implementation!!.instructions.indexOfFirst { instruction ->
                     instruction.opcode == Opcode.CHECK_CAST
                 } + 1
-                val jumpIndex = getStringIndex("Failed to convert Element to Flatbuffers: %s") + 2
+                val jumpIndex =
+                    getStringInstructionIndex("Failed to convert Element to Flatbuffers: %s") + 2
 
                 val freeIndex = it.scanResult.patternScanResult!!.startIndex - 1
 

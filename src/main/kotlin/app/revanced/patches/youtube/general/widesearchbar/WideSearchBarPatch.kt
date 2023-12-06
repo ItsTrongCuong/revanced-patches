@@ -1,21 +1,21 @@
 package app.revanced.patches.youtube.general.widesearchbar
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
-import app.revanced.patcher.fingerprint.MethodFingerprint
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.general.widesearchbar.fingerprints.SetActionBarRingoFingerprint
+import app.revanced.patches.youtube.general.widesearchbar.fingerprints.SetWordMarkHeaderFingerprint
 import app.revanced.patches.youtube.general.widesearchbar.fingerprints.YouActionBarFingerprint
-import app.revanced.patches.youtube.utils.fingerprints.SetToolBarPaddingFingerprint
+import app.revanced.patches.youtube.utils.fingerprints.LayoutSwitchFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.GENERAL
 import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch.contexts
-import app.revanced.util.integrations.Constants.GENERAL
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Patch(
@@ -45,7 +45,9 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -53,25 +55,32 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 @Suppress("unused")
 object WideSearchBarPatch : BytecodePatch(
     setOf(
+        LayoutSwitchFingerprint,
         SetActionBarRingoFingerprint,
-        SetToolBarPaddingFingerprint
+        SetWordMarkHeaderFingerprint
     )
 ) {
     override fun execute(context: BytecodeContext) {
 
-        arrayOf(
-            SetActionBarRingoFingerprint,
-            SetToolBarPaddingFingerprint
-        ).forEach {
-            it.injectHook(context)
-        }
+        // resolves fingerprints
+        val parentClassDef = SetActionBarRingoFingerprint.result?.classDef
+            ?: throw SetActionBarRingoFingerprint.exception
+        YouActionBarFingerprint.resolve(context, parentClassDef)
 
-        YouActionBarFingerprint.also {
-            it.resolve(
-                context,
-                SetActionBarRingoFingerprint.result!!.classDef
-            )
-        }.result?.let {
+        // patch methods
+        SetWordMarkHeaderFingerprint.result?.let {
+            val targetMethod =
+                context.toMethodWalker(it.method)
+                    .nextMethod(1, true)
+                    .getMethod() as MutableMethod
+
+            targetMethod.injectSearchBarHook()
+        } ?: throw SetWordMarkHeaderFingerprint.exception
+
+        LayoutSwitchFingerprint.result?.mutableMethod?.injectSearchBarHook()
+            ?: throw LayoutSwitchFingerprint.exception
+
+        YouActionBarFingerprint.result?.let {
             it.mutableMethod.apply {
                 val insertIndex = it.scanResult.patternScanResult!!.endIndex
                 val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
@@ -117,19 +126,15 @@ object WideSearchBarPatch : BytecodePatch(
     private const val FLAG = "android:paddingStart"
     private const val TARGET_RESOURCE_PATH = "res/layout/action_bar_ringo_background.xml"
 
-    private fun MethodFingerprint.injectHook(context: BytecodeContext) {
-        result?.let {
-            (context
-                .toMethodWalker(it.method)
-                .nextMethod(it.scanResult.patternScanResult!!.endIndex, true)
-                .getMethod() as MutableMethod).apply {
-                addInstructions(
-                    implementation!!.instructions.size - 1, """
-                            invoke-static {}, $GENERAL->enableWideSearchBar()Z
-                            move-result p0
-                            """
-                )
-            }
-        } ?: throw exception
+    /**
+     * Injects instructions required for certain methods.
+     */
+    private fun MutableMethod.injectSearchBarHook() {
+        addInstructions(
+            implementation!!.instructions.size - 1, """
+                invoke-static {}, $GENERAL->enableWideSearchBar()Z
+                move-result p0
+                """
+        )
     }
 }

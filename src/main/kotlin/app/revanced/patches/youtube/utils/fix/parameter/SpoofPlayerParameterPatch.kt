@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.utils.fix.parameter
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -18,9 +17,12 @@ import app.revanced.patches.youtube.utils.fix.parameter.fingerprints.StoryboardR
 import app.revanced.patches.youtube.utils.fix.parameter.fingerprints.StoryboardRendererSpecRecommendedLevelFingerprint
 import app.revanced.patches.youtube.utils.fix.parameter.fingerprints.StoryboardThumbnailFingerprint
 import app.revanced.patches.youtube.utils.fix.parameter.fingerprints.StoryboardThumbnailParentFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.MISC_PATH
+import app.revanced.patches.youtube.utils.playerresponse.PlayerResponsePatch
 import app.revanced.patches.youtube.utils.playertype.PlayerTypeHookPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.MISC_PATH
+import app.revanced.patches.youtube.utils.videoid.general.VideoIdPatch
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -29,6 +31,8 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
     description = "Spoofs player parameters to prevent playback issues.",
     dependencies = [
         PlayerTypeHookPatch::class,
+        PlayerResponsePatch::class,
+        VideoIdPatch::class,
         SettingsPatch::class
     ],
     compatiblePackages = [
@@ -51,7 +55,9 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -72,19 +78,9 @@ object SpoofPlayerParameterPatch : BytecodePatch(
         /**
          * Hook player parameter
          */
-        PlayerParameterBuilderFingerprint.result?.let {
-            it.mutableMethod.apply {
-                val videoIdRegister = 1
-                val playerParameterRegister = 3
-
-                addInstructions(
-                    0, """
-                        invoke-static {p$videoIdRegister, p$playerParameterRegister}, $INTEGRATIONS_CLASS_DESCRIPTOR->spoofParameter(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-                        move-result-object p$playerParameterRegister
-                        """
-                )
-            }
-        } ?: throw PlayerParameterBuilderFingerprint.exception
+        PlayerResponsePatch += PlayerResponsePatch.Hook.PlayerParameter(
+            "$INTEGRATIONS_CLASS_DESCRIPTOR->spoofParameter(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+        )
 
         /**
          * Forces the SeekBar thumbnail preview container to be shown
@@ -186,7 +182,6 @@ object SpoofPlayerParameterPatch : BytecodePatch(
                         """
                 )
             }
-
         } ?: throw PlayerResponseModelImplRecommendedLevel.exception
 
         /**

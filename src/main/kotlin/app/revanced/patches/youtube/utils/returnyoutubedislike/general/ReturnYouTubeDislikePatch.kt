@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.utils.returnyoutubedislike.general
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -10,6 +9,8 @@ import app.revanced.patcher.fingerprint.MethodFingerprint
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import app.revanced.patches.youtube.utils.integrations.Constants.COMPONENTS_PATH
+import app.revanced.patches.youtube.utils.integrations.Constants.UTILS_PATH
 import app.revanced.patches.youtube.utils.litho.LithoFilterPatch
 import app.revanced.patches.youtube.utils.playerresponse.PlayerResponsePatch
 import app.revanced.patches.youtube.utils.returnyoutubedislike.general.fingerprints.DislikeFingerprint
@@ -25,8 +26,7 @@ import app.revanced.patches.youtube.utils.returnyoutubedislike.rollingnumber.Ret
 import app.revanced.patches.youtube.utils.returnyoutubedislike.shorts.ReturnYouTubeDislikeShortsPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
 import app.revanced.patches.youtube.utils.videoid.general.VideoIdPatch
-import app.revanced.util.integrations.Constants.COMPONENTS_PATH
-import app.revanced.util.integrations.Constants.UTILS_PATH
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
@@ -65,7 +65,9 @@ import com.android.tools.smali.dexlib2.iface.reference.Reference
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -98,13 +100,14 @@ object ReturnYouTubeDislikePatch : BytecodePatch(
 
 
         TextComponentConstructorFingerprint.result?.let { parentResult ->
+            // Resolves fingerprints
+            val parentClassDef = parentResult.classDef
+            TextComponentContextFingerprint.resolve(context, parentClassDef)
+            TextComponentTmpFingerprint.resolve(context, parentClassDef)
+            TextComponentAtomicReferenceFingerprint.resolve(context, parentClassDef)
+            TextComponentAtomicReferenceLegacyFingerprint.resolve(context, parentClassDef)
 
-            TextComponentContextFingerprint.also {
-                it.resolve(
-                    context,
-                    parentResult.classDef
-                )
-            }.result?.let {
+            TextComponentContextFingerprint.result?.let {
                 it.mutableMethod.apply {
                     val booleanIndex = it.scanResult.patternScanResult!!.endIndex
 
@@ -124,12 +127,7 @@ object ReturnYouTubeDislikePatch : BytecodePatch(
                 }
             } ?: throw TextComponentContextFingerprint.exception
 
-            TextComponentTmpFingerprint.also {
-                it.resolve(
-                    context,
-                    parentResult.classDef
-                )
-            }.result?.let {
+            TextComponentTmpFingerprint.result?.let {
                 it.mutableMethod.apply {
                     val startIndex = it.scanResult.patternScanResult!!.startIndex
                     tmpRegister =
@@ -139,17 +137,11 @@ object ReturnYouTubeDislikePatch : BytecodePatch(
 
 
             val textComponentAtomicReferenceResult =
-                TextComponentAtomicReferenceFingerprint.also {
-                    it.resolve(context, parentResult.classDef)
-                }.result
-                    ?: TextComponentAtomicReferenceLegacyFingerprint.also {
-                        it.resolve(context, parentResult.classDef)
-                    }.result
+                TextComponentAtomicReferenceFingerprint.result
+                    ?: TextComponentAtomicReferenceLegacyFingerprint.result
                     ?: throw TextComponentAtomicReferenceLegacyFingerprint.exception
 
-            TextComponentAtomicReferenceFingerprint.also {
-                it.resolve(context, parentResult.classDef)
-            }.result?.let {
+            TextComponentAtomicReferenceFingerprint.result?.let {
                 it.mutableMethod.apply {
                     val startIndex = it.scanResult.patternScanResult!!.startIndex
                     val originalRegisterA =
@@ -193,13 +185,13 @@ object ReturnYouTubeDislikePatch : BytecodePatch(
             }
         } ?: throw TextComponentConstructorFingerprint.exception
 
+        VideoIdPatch.injectCall("$INTEGRATIONS_RYD_CLASS_DESCRIPTOR->newVideoLoaded(Ljava/lang/String;)V")
+        VideoIdPatch.injectPlayerResponseVideoId("$INTEGRATIONS_RYD_CLASS_DESCRIPTOR->preloadVideoId(Ljava/lang/String;Z)V")
+
         if (SettingsPatch.upward1834) {
             LithoFilterPatch.addFilter(FILTER_CLASS_DESCRIPTOR)
-            PlayerResponsePatch.injectCall("$FILTER_CLASS_DESCRIPTOR->newPlayerResponseVideoId(Ljava/lang/String;Z)V")
+            VideoIdPatch.injectPlayerResponseVideoId("$FILTER_CLASS_DESCRIPTOR->newPlayerResponseVideoId(Ljava/lang/String;Z)V")
         }
-
-        PlayerResponsePatch.injectCall("$INTEGRATIONS_RYD_CLASS_DESCRIPTOR->preloadVideoId(Ljava/lang/String;Z)V")
-        VideoIdPatch.injectCall("$INTEGRATIONS_RYD_CLASS_DESCRIPTOR->newVideoLoaded(Ljava/lang/String;)V")
 
         /**
          * Add ReVanced Extended Settings

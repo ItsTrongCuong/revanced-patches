@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="microg_not_installed_notice">Пожалуйста, установите MicroG.</string>
+    <string name="microg_not_installed_warning">MicroG не установлен.</string>
+    <string name="microg_not_running_warning">MicroG не работает в фоновом режиме.</string>
+    <string name="microg_settings_summary">Включение настройки облачных сообщений для получения уведомлений.</string>
+    <string name="microg_settings_title">MicroG</string>
     <string name="revanced_category_account">Аккаунт</string>
     <string name="revanced_category_action_bar">Панель действий</string>
     <string name="revanced_category_ads">Реклама</string>
@@ -9,6 +14,9 @@
     <string name="revanced_category_navigation">Навигация</string>
     <string name="revanced_category_player">Плеер</string>
     <string name="revanced_category_video">Видео</string>
+    <string name="revanced_close_interstitial_ads_summary">Автоматически закрывать полноэкранную рекламу.</string>
+    <string name="revanced_close_interstitial_ads_title">Закрывать полноэкранную рекламу</string>
+    <string name="revanced_close_interstitial_ads_toast">Полноэкранная реклама закрыта.</string>
     <string name="revanced_custom_filter_strings_summary">Фильтровать компоненты по названиям через строку.</string>
     <string name="revanced_custom_filter_strings_title">Изменить пользовательский фильтр</string>
     <string name="revanced_custom_filter_strings_warning">Недопустимый пользовательский фильтр, сброс к данным по умолчанию.</string>
@@ -42,7 +50,7 @@
     <string name="revanced_enable_new_player_background_summary">Включает новый фон полноэкранного плеера.</string>
     <string name="revanced_enable_new_player_background_title">Новый фон плеера</string>
     <string name="revanced_enable_old_player_layout_summary">"Вернуть интерфейс полноэкранного плеера к старому стилю.
-Некоторые настройки могут не работать в старом интерфейсе полноэкранного плеера.
+Некоторые настройки не могут работать в старом интерфейсе полноэкранного плеера.
 
 ВАЖНО: Перед включением этой опции удостоверьтесь, что параметр \"Новый фон плеера\" отключён."</string>
     <string name="revanced_enable_old_player_layout_title">Старый интерфейс плеера</string>
@@ -60,13 +68,18 @@
     <string name="revanced_enable_sleep_timer_title">Пункт \"Автовыключение\"</string>
     <string name="revanced_enable_zen_mode_summary">Добавляет серый оттенок в видеоплеер, чтобы уменьшить нагрузку на глаза.</string>
     <string name="revanced_enable_zen_mode_title">Режим \"Дзен\"</string>
-    <string name="revanced_extended_settings_import">Импорт</string>
+    <string name="revanced_extended_settings_export_as_file">Экспортировать настройки в файл</string>
+    <string name="revanced_extended_settings_export_failed">Не удалось экспортировать настройки.</string>
+    <string name="revanced_extended_settings_export_success">Настройки успешно экспортированы.</string>
+    <string name="revanced_extended_settings_import">Импортировать</string>
+    <string name="revanced_extended_settings_import_as_file">Импортировать настройки из файла</string>
     <string name="revanced_extended_settings_import_copy">Копировать</string>
-    <string name="revanced_extended_settings_import_export_summary">Импортировать или экспортировать настройки в виде текста.</string>
-    <string name="revanced_extended_settings_import_export_title">Импорт / Экспорт</string>
-    <string name="revanced_extended_settings_import_failure_parse">Не удалось восстановить настройки: %s.</string>
+    <string name="revanced_extended_settings_import_export_as_text">Импорт / Экспорт настроек в виде текста</string>
+    <string name="revanced_extended_settings_import_export_summary">Импортировать или экспортировать настройки.</string>
+    <string name="revanced_extended_settings_import_export_title">Импорт / Экспорт настроек</string>
+    <string name="revanced_extended_settings_import_failed">Не удалось импортировать: %s.</string>
     <string name="revanced_extended_settings_import_reset">Настройки сброшены до начальных.</string>
-    <string name="revanced_extended_settings_import_success">Настройки в кол-ве: %d успешно восстановлены.</string>
+    <string name="revanced_extended_settings_import_success">Настройки в кол-ве: %d успешно импортированы.</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s не установлен. Пожалуйста, установите его.</string>
     <string name="revanced_external_downloader_package_name_summary">Имя пакета вашего установленного внешнего загрузчика. Например, NewPipe или YTDLnis.</string>
     <string name="revanced_external_downloader_package_name_title">Имя пакета внешнего загрузчика</string>
@@ -105,6 +118,7 @@
     <string name="revanced_hide_flyout_panel_like_dislike_title">Скрыть кнопки \"Нравится\" и \"Не нравится\"</string>
     <string name="revanced_hide_flyout_panel_play_next_title">Скрыть пункт \"Включить следующим\"</string>
     <string name="revanced_hide_flyout_panel_remove_from_library_title">Скрыть пункт \"Удалить из библиотеки\"</string>
+    <string name="revanced_hide_flyout_panel_remove_from_playlist_title">Скрыть пункт \"Удалить из плейлиста\"</string>
     <string name="revanced_hide_flyout_panel_report_title">Скрыть пункт \"Пожаловаться\"</string>
     <string name="revanced_hide_flyout_panel_save_episode_for_later_title">Скрыть пункт \"Слушать позже\"</string>
     <string name="revanced_hide_flyout_panel_save_to_library_title">Скрыть пункт \"Сохранить в библиотеке\"</string>
@@ -112,8 +126,12 @@
     <string name="revanced_hide_flyout_panel_share_title">Скрыть пункт \"Поделиться\"</string>
     <string name="revanced_hide_flyout_panel_start_radio_title">Скрыть пункт \"Включить радиостанцию\"</string>
     <string name="revanced_hide_flyout_panel_view_song_credit_title">Скрыть пункт \"Участники и создатели\"</string>
+    <string name="revanced_hide_general_ads_summary">Скрывает рекламу общего формата.</string>
+    <string name="revanced_hide_general_ads_title">Скрыть рекламу общего формата</string>
     <string name="revanced_hide_handle_summary">Скрывает электронную почту / @ник в меню смены аккаунтов.</string>
     <string name="revanced_hide_handle_title">Скрыть электронную почту / @ник</string>
+    <string name="revanced_hide_history_button_summary">Скрывает кнопку \"История\" на панели инструментов.</string>
+    <string name="revanced_hide_history_button_title">Скрыть кнопку \"История\"</string>
     <string name="revanced_hide_home_button_summary">Скрывает вкладку \"Главная\".</string>
     <string name="revanced_hide_home_button_title">Скрыть вкладку \"Главная\"</string>
     <string name="revanced_hide_library_button_summary">Скрывает вкладку \"Библиотека\".</string>
@@ -128,6 +146,10 @@
     <string name="revanced_hide_new_playlist_button_title">Скрыть кнопку \"Новый\"</string>
     <string name="revanced_hide_playlist_card_summary">Скрывает карточку плейлиста с главной страницы.</string>
     <string name="revanced_hide_playlist_card_title">Скрыть карточку плейлиста</string>
+    <string name="revanced_hide_premium_promotion_summary">Скрывает всплывающую рекламу Premium.</string>
+    <string name="revanced_hide_premium_promotion_title">Скрыть всплывающую рекламу Premium</string>
+    <string name="revanced_hide_premium_renewal_summary">Скрывает баннер продления Premium.</string>
+    <string name="revanced_hide_premium_renewal_title">Скрыть баннер продления Premium</string>
     <string name="revanced_hide_samples_button_summary">Скрывает вкладку \"Семплы\".</string>
     <string name="revanced_hide_samples_button_title">Скрыть вкладку \"Семплы\"</string>
     <string name="revanced_hide_terms_container_summary">Скрывает пункт \"Конфиденциальность • Условия\".</string>
@@ -136,11 +158,11 @@
     <string name="revanced_hide_upgrade_button_title">Скрыть вкладку \"Платные подписки\"</string>
     <string name="revanced_hook_action_bar_download_summary">Заменяет кнопку \"Скачать\" кнопкой запуска внешнего загрузчика.</string>
     <string name="revanced_hook_action_bar_download_title">Замена кнопки \"Скачать\"</string>
-    <string name="revanced_playback_speed_normal">Стандар.</string>
+    <string name="revanced_playback_speed_normal">Стандартная</string>
     <string name="revanced_playlist_dismiss">Уже воспроизводится с официального источника музыки.</string>
     <string name="revanced_playlist_error">Официальный источник музыки недоступен.</string>
-    <string name="revanced_reboot_first_run">Перезапустите для правильной загрузки интерфейса</string>
-    <string name="revanced_reboot_message">Обновить и перезапустить?</string>
+    <string name="revanced_restart_first_run">Перезапустите для правильной загрузки интерфейса</string>
+    <string name="revanced_restart_message">Обновите и перезапустите</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_summary">При нажатии на пункт \"Открыть в YouTube\" воспроизведение продолжится с текущего времени просмотра.</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_title">Продолжить просмотр</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_summary">Заменяет пункт \"Очистить очередь\" на пункт \"Открыть в YouTube\".</string>
@@ -150,23 +172,28 @@
     <string name="revanced_remember_repeat_state_title">Запоминать состояние повтора</string>
     <string name="revanced_remember_shuffle_state_summary">Запоминает состояние кнопки \"Перемешать\".</string>
     <string name="revanced_remember_shuffle_state_title">Запоминать состояние перемешивания</string>
-    <string name="revanced_reset">Сброс</string>
+    <string name="revanced_reset">Сбросить</string>
     <string name="revanced_ryd_about">Об интеграции</string>
     <string name="revanced_ryd_attribution_summary">Данные предоставлены Return YouTube Dislike API. Нажмите здесь, чтобы узнать больше.</string>
     <string name="revanced_ryd_compact_layout_summary">Скрывает линию-разделитель после кнопки \"Нравится\".</string>
     <string name="revanced_ryd_compact_layout_title">Компактная кнопка \"Нравится\"</string>
-    <string name="revanced_ryd_dislike_percentage_summary">Вместо числа отметок \"Не нравится\"(Дизлайков), они отображаются как процент.</string>
+    <string name="revanced_ryd_dislike_percentage_summary">Вместо числа отметок \"Не нравится\", они отображаются как процент.</string>
     <string name="revanced_ryd_dislike_percentage_title">Кол-во отметок \"Не нравится\" в процентах</string>
-    <string name="revanced_ryd_enabled_summary">Отображает количество отметок \"Не нравится\"(Дизлайков) в видео.</string>
+    <string name="revanced_ryd_enabled_summary">Отображает количество отметок \"Не нравится\" в видео.</string>
+    <string name="revanced_ryd_failure_connection_timeout">Отметки \"Не нравится\" временно недоступны (время API истекло).</string>
+    <string name="revanced_ryd_failure_connection_status_code" formatted="false">Отметки \"Не нравится\" недоступны (статус %d).</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">Отметки \"Не нравится\" недоступны (достигнут лимит клиентов сервера API).</string>
-    <string name="revanced_ryd_video_likes_hidden_by_video_owner">Скрыто</string>
+    <string name="revanced_ryd_failure_generic">Отметки \"Не нравится\" недоступны (%s).</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary">Отображает всплывающее уведомление, когда ReturnYouTubeDislike API недоступен.</string>
+    <string name="revanced_ryd_toast_on_connection_error_title">Уведомление, когда API недоступен</string>
+    <string name="revanced_ryd_video_likes_hidden_by_video_owner">Скрыты</string>
     <string name="revanced_sanitize_sharing_links_summary">Убирает параметры отслеживания запросов из URL при отправке ссылки.</string>
-    <string name="revanced_sanitize_sharing_links_title">\"Очищать\" отправленные ссылки</string>
+    <string name="revanced_sanitize_sharing_links_title">Очищать ссылки от мусора</string>
     <string name="revanced_save_playback_speed" formatted="false">Скорость воспроизведения по умолчанию изменена на: %s.</string>
     <string name="revanced_save_video_quality_mobile" formatted="false">Качество по умолчанию при моб. сети изменено на: %s.</string>
     <string name="revanced_save_video_quality_none">Не удалось установить выбранное качество.</string>
     <string name="revanced_save_video_quality_wifi" formatted="false">Качество по умолчанию при Wi-Fi изменено на: %s.</string>
-    <string name="revanced_share_copy_settings_success">Настройки скопированы в буфер обмена.</string>
+    <string name="revanced_share_copy_settings_success">Настройки скопированы в буфер.</string>
     <string name="revanced_spoof_app_version_summary">"Подменяет версию клиента на старую.
 
 • Это изменит внешний вид приложения, но могут возникнуть неизвестные проблемы.
@@ -185,8 +212,10 @@
     <string name="revanced_start_page_title">Вкладка начального экрана</string>
     <string name="sb_enabled">SponsorBlock</string>
     <string name="sb_enabled_sum">SponsorBlock - коллективная система для пропуска раздражающих частей видео в YouTube.</string>
+    <string name="sb_toast_on_connection_error">Уведомление, когда API недоступен</string>
+    <string name="sb_toast_on_connection_error_sum">Отображает всплывающее уведомление, когда SponsorBlock API недоступен.</string>
     <string name="sb_toast_on_skip">Уведомление при автопропуске</string>
-    <string name="sb_toast_on_skip_sum">Всплывающее уведомление отображено при автоматическом пропуске сегмента.</string>
+    <string name="sb_toast_on_skip_sum">Отображает всплывающее уведомление при автоматическом пропуске сегмента.</string>
     <string name="sb_api_url">Изменить адрес сервера API</string>
     <string name="sb_api_url_sum">Адрес, используемый для связи с сервером SponsorBlock. Не изменяйте его, если не знаете, что делаете.</string>
     <string name="sb_api_url_reset">Адрес сервера API сброшен.</string>
@@ -198,7 +227,7 @@
     <string name="sb_segments_selfpromo">Бесплатная реклама / Самореклама</string>
     <string name="sb_segments_selfpromo_sum">Похоже на спонсорскую рекламу, за исключением бесплатной рекламы или саморекламы. Включает разделы о товарах, пожертвованиях или информации о том, с кем они сотрудничали.</string>
     <string name="sb_segments_interaction">Напоминание о взаимодействии</string>
-    <string name="sb_segments_interaction_sum">Короткое напоминание поставить отметку \"Нравится\"(Лайк), подписаться на канал или соцсети посреди видеоролика. Если эта вставка длительная или о чём-то конкретном, она должна классифицироваться как самореклама.</string>
+    <string name="sb_segments_interaction_sum">Короткое напоминание поставить отметку \"Нравится\", подписаться на канал или соцсети посреди видеоролика. Если эта вставка длительная или о чём-то конкретном, она должна классифицироваться как самореклама.</string>
     <string name="sb_segments_intro">Пауза / Интро</string>
     <string name="sb_segments_intro_sum">Интервал без фактического содержания. Это может быть пауза, статический кадр или повторяющаяся анимация. Не включает переходы, содержащие информацию.</string>
     <string name="sb_segments_outro">Конечные заставки / Титры</string>
@@ -224,6 +253,9 @@
     <string name="sb_skipped_multiple_segments">Пропущено несколько сегментов.</string>
     <string name="sb_skip_automatically">Автоматически пропускать</string>
     <string name="sb_skip_ignore">Отключить</string>
+    <string name="sb_sponsorblock_connection_failure_generic">SponsorBlock временно недоступен.</string>
+    <string name="sb_sponsorblock_connection_failure_status" formatted="false">SponsorBlock временно недоступен (статус %d).</string>
+    <string name="sb_sponsorblock_connection_failure_timeout">SponsorBlock временно недоступен (время API истекло).</string>
     <string name="sb_color_dot_label">Цвет:</string>
     <string name="sb_color_changed">Цвет изменён.</string>
     <string name="sb_color_reset">Цвет сброшен.</string>

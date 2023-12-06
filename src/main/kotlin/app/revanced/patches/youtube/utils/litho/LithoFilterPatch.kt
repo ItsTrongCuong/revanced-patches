@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.utils.litho
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
@@ -9,9 +8,10 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.shared.patch.litho.ComponentParserPatch
 import app.revanced.patches.shared.patch.litho.ComponentParserPatch.generalHook
+import app.revanced.patches.youtube.utils.integrations.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.litho.fingerprints.GeneralByteBufferFingerprint
 import app.revanced.patches.youtube.utils.litho.fingerprints.LithoFilterFingerprint
-import app.revanced.util.integrations.Constants.COMPONENTS_PATH
+import app.revanced.util.exception
 import java.io.Closeable
 
 @Patch(dependencies = [ComponentParserPatch::class])
@@ -49,10 +49,10 @@ object LithoFilterPatch : BytecodePatch(
             addFilter = { classDescriptor ->
                 addInstructions(
                     0, """
-                        new-instance v0, $classDescriptor
-                        invoke-direct {v0}, $classDescriptor-><init>()V
-                        const/16 v3, ${filterCount++}
-                        aput-object v0, v2, v3
+                        new-instance v1, $classDescriptor
+                        invoke-direct {v1}, $classDescriptor-><init>()V
+                        const/16 v2, ${filterCount++}
+                        aput-object v1, v0, v2
                         """
                 )
             }
@@ -63,9 +63,8 @@ object LithoFilterPatch : BytecodePatch(
     override fun close() = LithoFilterFingerprint.result!!
         .mutableMethod.addInstructions(
             0, """
-                const/16 v1, $filterCount
-                new-array v2, v1, [$COMPONENTS_PATH/Filter;
-                const/4 v1, 0x1
+                const/16 v0, $filterCount
+                new-array v0, v0, [$COMPONENTS_PATH/Filter;
                 """
         )
 }

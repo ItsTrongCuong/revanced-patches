@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="microg_not_installed_notice">Por favor, instale o MicroG.</string>
+    <string name="microg_not_installed_warning">O microG não foi encontrado.</string>
+    <string name="microg_not_running_warning">O MicroG não é executado em segundo plano.</string>
+    <string name="microg_settings_summary">Ative as configurações de mensagens na nuvem para receber notificações.</string>
+    <string name="microg_settings_title">Abrir o MicroG</string>
     <string name="revanced_category_account">Conta</string>
     <string name="revanced_category_action_bar">Barra de ação</string>
     <string name="revanced_category_ads">Anúncios</string>
@@ -9,6 +14,9 @@
     <string name="revanced_category_navigation">Navegação</string>
     <string name="revanced_category_player">Reprodutor</string>
     <string name="revanced_category_video">Vídeo</string>
+    <string name="revanced_close_interstitial_ads_summary">Desativar anúncios intersticiais automaticamente.</string>
+    <string name="revanced_close_interstitial_ads_title">Fechar anúncios intersticiais</string>
+    <string name="revanced_close_interstitial_ads_toast">Fechando anúncios intersticiais.</string>
     <string name="revanced_custom_filter_strings_summary">Filtrar nomes de componentes separado por linha</string>
     <string name="revanced_custom_filter_strings_title">Editar filtro personalizado</string>
     <string name="revanced_custom_filter_strings_warning">Filtro personalizado inválido, redefinido para padrão.</string>
@@ -60,11 +68,16 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_enable_sleep_timer_title">Ativar Timer de suspensão</string>
     <string name="revanced_enable_zen_mode_summary">Adiciona uma tonalidade cinza ao reprodutor de vídeo para reduzir o cansaço visual.</string>
     <string name="revanced_enable_zen_mode_title">Ativar modo calmo</string>
+    <string name="revanced_extended_settings_export_as_file">Exportar configurações para um arquivo</string>
+    <string name="revanced_extended_settings_export_failed">Falha ao exportar configurações.</string>
+    <string name="revanced_extended_settings_export_success">As configurações foram exportadas com sucesso.</string>
     <string name="revanced_extended_settings_import">Importar</string>
+    <string name="revanced_extended_settings_import_as_file">Importar configurações de um arquivo</string>
     <string name="revanced_extended_settings_import_copy">Copiar</string>
+    <string name="revanced_extended_settings_import_export_as_text">Importar / Exportar as configurações como texto</string>
     <string name="revanced_extended_settings_import_export_summary">Importar ou exportar as configurações como texto.</string>
     <string name="revanced_extended_settings_import_export_title">Importar / Exportar</string>
-    <string name="revanced_extended_settings_import_failure_parse">Importação falhou: %s</string>
+    <string name="revanced_extended_settings_import_failed">A importação falhou: %s.</string>
     <string name="revanced_extended_settings_import_reset">Configurações redefinidas para o padrão</string>
     <string name="revanced_extended_settings_import_success">Configurações %d importadas</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s não está instalado. Por favor, instale-o.</string>
@@ -105,6 +118,7 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_hide_flyout_panel_like_dislike_title">Ocultar botão de Like e Deslike</string>
     <string name="revanced_hide_flyout_panel_play_next_title">Ocultar menu Tocar a seguir</string>
     <string name="revanced_hide_flyout_panel_remove_from_library_title">Ocultar menu Remover da biblioteca</string>
+    <string name="revanced_hide_flyout_panel_remove_from_playlist_title">Ocultar menu Remover na playlist</string>
     <string name="revanced_hide_flyout_panel_report_title">Ocultar menu Denunciar</string>
     <string name="revanced_hide_flyout_panel_save_episode_for_later_title">Ocultar menu Salvar episódio para mais tarde</string>
     <string name="revanced_hide_flyout_panel_save_to_library_title">Ocultar menu Salvar na biblioteca</string>
@@ -112,8 +126,12 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_hide_flyout_panel_share_title">Ocultar menu Compartilhar</string>
     <string name="revanced_hide_flyout_panel_start_radio_title">Ocultar menu Iniciar rádio</string>
     <string name="revanced_hide_flyout_panel_view_song_credit_title">Ocultar menu Mostrar créditos da música</string>
+    <string name="revanced_hide_general_ads_summary">Oculta anúncios gerais.</string>
+    <string name="revanced_hide_general_ads_title">Ocultar anúncios gerais</string>
     <string name="revanced_hide_handle_summary">Oculta o perfil no alternador de conta.</string>
     <string name="revanced_hide_handle_title">Ocultar identificador</string>
+    <string name="revanced_hide_history_button_summary">Oculta o botão de histórico na barra de ferramentas.</string>
+    <string name="revanced_hide_history_button_title">Ocultar botão de histórico</string>
     <string name="revanced_hide_home_button_summary">Oculta o botão de início.</string>
     <string name="revanced_hide_home_button_title">Ocultar botão Início</string>
     <string name="revanced_hide_library_button_summary">Oculta o botão de biblioteca.</string>
@@ -128,6 +146,10 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_hide_new_playlist_button_title">Ocultar botão Nova playlist</string>
     <string name="revanced_hide_playlist_card_summary">Oculta o cartão da playlist da página inicial.</string>
     <string name="revanced_hide_playlist_card_title">Ocultar card de playlist recomendada</string>
+    <string name="revanced_hide_premium_promotion_summary">Oculta pop-up de promoção premium.</string>
+    <string name="revanced_hide_premium_promotion_title">Ocultar pop-up de promoção premium</string>
+    <string name="revanced_hide_premium_renewal_summary">Oculta o banner de renovação premium.</string>
+    <string name="revanced_hide_premium_renewal_title">Ocultar banner de renovação premium</string>
     <string name="revanced_hide_samples_button_summary">Oculta o botão descobertas.</string>
     <string name="revanced_hide_samples_button_title">Ocultar botão Descobertas</string>
     <string name="revanced_hide_terms_container_summary">Oculta o contêiner de termos de serviço.</string>
@@ -136,10 +158,11 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_hide_upgrade_button_title">Ocultar botão Upgrade</string>
     <string name="revanced_hook_action_bar_download_summary">Substitui o botão de download offline por um botão de download externo.</string>
     <string name="revanced_hook_action_bar_download_title">Botão de download hook</string>
+    <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_playlist_dismiss">Já reproduzindo fonte de música oficial</string>
     <string name="revanced_playlist_error">Fonte oficial de música não disponível</string>
-    <string name="revanced_reboot_first_run">Reinicie para carregar o layout normalmente</string>
-    <string name="revanced_reboot_message">Atualizar e reiniciar</string>
+    <string name="revanced_restart_first_run">Reinicie para carregar o layout normalmente</string>
+    <string name="revanced_restart_message">Atualizar e reiniciar</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_summary">Quando estiver assistindo no YouTube, continue assistindo do tempo atual.</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_title">Continuar assistindo</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_summary">Substitui o menu remover fila por assistir no YouTube.</string>
@@ -157,11 +180,19 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_ryd_dislike_percentage_summary">Em vez do número de dislikes, é mostrada a porcentagem de dislikes.</string>
     <string name="revanced_ryd_dislike_percentage_title">Dislikes como porcentagem</string>
     <string name="revanced_ryd_enabled_summary">Mostra a contagem de deslike dos vídeos.</string>
+    <string name="revanced_ryd_failure_connection_timeout">Dislikes temporariamente indisponível (API expirou).</string>
+    <string name="revanced_ryd_failure_connection_status_code" formatted="false">Descurtir não disponível (status %d).</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">Dislikes não disponíveis (limite de API do cliente atingido)</string>
+    <string name="revanced_ryd_failure_generic">Deslikes não disponível (%s).</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary">Toast exibida se API do RetornYouTubeDislike não está disponível.</string>
+    <string name="revanced_ryd_toast_on_connection_error_title">Mostrar uma notificação flutuante se a API não estiver disponível</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Oculto</string>
     <string name="revanced_sanitize_sharing_links_summary">Remove os parâmetros de consulta de rastreamento das URLs ao compartilhar os links.</string>
     <string name="revanced_sanitize_sharing_links_title">Limpar links compartilhados</string>
+    <string name="revanced_save_playback_speed" formatted="false">Alterando a velocidade padrão para %s.</string>
+    <string name="revanced_save_video_quality_mobile" formatted="false">Alterando a qualidade padrão de dados móveis para %s.</string>
     <string name="revanced_save_video_quality_none">Falha ao definir qualidade</string>
+    <string name="revanced_save_video_quality_wifi" formatted="false">Alterar a qualidade padrão do Wi-Fi para %s.</string>
     <string name="revanced_share_copy_settings_success">Configurações copiadas para área de transferência.</string>
     <string name="revanced_spoof_app_version_summary">"Falsificar a versão cliente para a versão antiga
 
@@ -183,6 +214,8 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="revanced_start_page_title">Página inicial</string>
     <string name="sb_enabled">Ativar SponsorBlock</string>
     <string name="sb_enabled_sum">SponsorBlock é um sistema coletivo para pular partes patrocinadas ou irritantes de vídeos do YouTube.</string>
+    <string name="sb_toast_on_connection_error">Exibir uma notificação flutuante se a API não estiver disponível</string>
+    <string name="sb_toast_on_connection_error_sum">Toast exibida se a API do SponsorBlock não está disponível.</string>
     <string name="sb_toast_on_skip">Mostrar um aviso ao pular o segmento automaticamente</string>
     <string name="sb_toast_on_skip_sum">Um aviso é exibido quando um segmento é ignorado automaticamente.</string>
     <string name="sb_api_url">Alterar URL da API</string>
@@ -222,6 +255,9 @@ AVISO: não ative o novo fundo do reprodutor enquanto isto estiver ativado"</str
     <string name="sb_skipped_multiple_segments">Pulou vários segmentos</string>
     <string name="sb_skip_automatically">Pular automaticamente</string>
     <string name="sb_skip_ignore">Desativar</string>
+    <string name="sb_sponsorblock_connection_failure_generic">SponsorBlock temporariamente indisponível.</string>
+    <string name="sb_sponsorblock_connection_failure_status" formatted="false">SponsorBlock temporariamente indisponível (status %d).</string>
+    <string name="sb_sponsorblock_connection_failure_timeout">SponsorBlock temporariamente indisponível (API expirou).</string>
     <string name="sb_color_dot_label">Cor:</string>
     <string name="sb_color_changed">Cor alterada</string>
     <string name="sb_color_reset">Redefinir cor</string>

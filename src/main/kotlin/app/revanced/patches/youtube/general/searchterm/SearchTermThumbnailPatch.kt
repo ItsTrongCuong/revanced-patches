@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.general.searchterm
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -11,9 +10,10 @@ import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.smali.ExternalLabel
-import app.revanced.patches.youtube.general.searchterm.fingerprints.SearchTermThumbnailFingerprint
+import app.revanced.patches.youtube.general.searchterm.fingerprints.CreateSearchSuggestionsFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.GENERAL
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.GENERAL
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.NarrowLiteralInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
@@ -43,17 +43,19 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
 )
 @Suppress("unused")
 object SearchTermThumbnailPatch : BytecodePatch(
-    setOf(SearchTermThumbnailFingerprint)
+    setOf(CreateSearchSuggestionsFingerprint)
 ) {
     override fun execute(context: BytecodeContext) {
-        SearchTermThumbnailFingerprint.result?.let { result ->
+        CreateSearchSuggestionsFingerprint.result?.let { result ->
             result.mutableMethod.apply {
                 val instructions = implementation!!.instructions
 
@@ -90,7 +92,7 @@ object SearchTermThumbnailPatch : BytecodePatch(
                 )
                 removeInstruction(replaceIndex)
             }
-        } ?: throw SearchTermThumbnailFingerprint.exception
+        } ?: throw CreateSearchSuggestionsFingerprint.exception
 
         /**
          * Add settings

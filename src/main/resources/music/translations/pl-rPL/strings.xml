@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="microg_not_installed_notice">Proszę zainstalować MicroG.</string>
+    <string name="microg_not_installed_warning">MicroG nie zostało znalezione.</string>
+    <string name="microg_not_running_warning">MicroG nie działa w tle.</string>
+    <string name="microg_settings_summary">Włącz cloud messaging w ustawieniach, by otrzymywać powiadomienia.</string>
+    <string name="microg_settings_title">Otwórz MicroG</string>
     <string name="revanced_category_account">Konto</string>
     <string name="revanced_category_action_bar">Pasek akcji</string>
     <string name="revanced_category_ads">Reklamy</string>
@@ -9,6 +14,9 @@
     <string name="revanced_category_navigation">Nawigacja</string>
     <string name="revanced_category_player">Odtwarzacz</string>
     <string name="revanced_category_video">Wideo</string>
+    <string name="revanced_close_interstitial_ads_summary">Automatycznie zamyka pełnoekranowe reklamy.</string>
+    <string name="revanced_close_interstitial_ads_title">Zamknij reklamy pełnoekranowe</string>
+    <string name="revanced_close_interstitial_ads_toast">Zamknięto pełnoekranowe reklamy.</string>
     <string name="revanced_custom_filter_strings_summary">Filtruj nazwy komponentów, oddzielając je osobnymi liniami.</string>
     <string name="revanced_custom_filter_strings_title">Edytuj własny filtr</string>
     <string name="revanced_custom_filter_strings_warning">Nieprawidłowy własny filtr, przywróć domyślne wartości.</string>
@@ -60,11 +68,16 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_enable_sleep_timer_title">Włącz wyłącznik czasowy</string>
     <string name="revanced_enable_zen_mode_summary">Dodaje szary odcień do odtwarzacza wideo, aby zmniejszyć zmęczenie oczu.</string>
     <string name="revanced_enable_zen_mode_title">Włącz tryb zen</string>
+    <string name="revanced_extended_settings_export_as_file">Wyeksportuj ustawienia do pliku</string>
+    <string name="revanced_extended_settings_export_failed">Nie udało się wyeksportować ustawień.</string>
+    <string name="revanced_extended_settings_export_success">Ustawienia zostały pomyślnie wyeksportowane.</string>
     <string name="revanced_extended_settings_import">Import</string>
+    <string name="revanced_extended_settings_import_as_file">Zaimportuj ustawienia z pliku</string>
     <string name="revanced_extended_settings_import_copy">Kopiuj</string>
-    <string name="revanced_extended_settings_import_export_summary">Importuje lub eksportuje ustawienia jako plik tekstowy.</string>
+    <string name="revanced_extended_settings_import_export_as_text">Zaimportuj/Wyeksportuj ustawienia jako tekst</string>
+    <string name="revanced_extended_settings_import_export_summary">Zaimportuj lub wyeksportuj ustawienia</string>
     <string name="revanced_extended_settings_import_export_title">Importuj/Eksportuj ustawienia</string>
-    <string name="revanced_extended_settings_import_failure_parse">Importowanie nieudane: %s.</string>
+    <string name="revanced_extended_settings_import_failed">Nie udało się zaimportować: %s.</string>
     <string name="revanced_extended_settings_import_reset">Ustawienia zostały zresetowane do domyślnych.</string>
     <string name="revanced_extended_settings_import_success">Zaimportowano ustawienia %d.</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s nie jest zainstalowany. Zainstaluj go.</string>
@@ -105,6 +118,7 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_hide_flyout_panel_like_dislike_title">Ukryj przyciski łapki w górę i dół</string>
     <string name="revanced_hide_flyout_panel_play_next_title">Ukryj menu odtwarzania jako następny</string>
     <string name="revanced_hide_flyout_panel_remove_from_library_title">Ukryj menu usuwania z biblioteki</string>
+    <string name="revanced_hide_flyout_panel_remove_from_playlist_title">Ukryj menu usuwania z playlisty</string>
     <string name="revanced_hide_flyout_panel_report_title">Ukryj menu zgłaszania</string>
     <string name="revanced_hide_flyout_panel_save_episode_for_later_title">Ukryj menu od zapisywania odcinka na później</string>
     <string name="revanced_hide_flyout_panel_save_to_library_title">Ukryj menu dodawania do biblioteki</string>
@@ -112,8 +126,12 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_hide_flyout_panel_share_title">Ukryj menu udostępniania</string>
     <string name="revanced_hide_flyout_panel_start_radio_title">Ukryj menu radia</string>
     <string name="revanced_hide_flyout_panel_view_song_credit_title">Ukryj menu twórców piosenki</string>
+    <string name="revanced_hide_general_ads_summary">Ukrywa ogólne reklamy.</string>
+    <string name="revanced_hide_general_ads_title">Ukryj ogólne reklamy</string>
     <string name="revanced_hide_handle_summary">Ukrywa nicki w przełączniku kont.</string>
     <string name="revanced_hide_handle_title">Ukryj nicki</string>
+    <string name="revanced_hide_history_button_summary">Usuwa przycisk historii z paska narzędzi.</string>
+    <string name="revanced_hide_history_button_title">Ukryj przycisk historii</string>
     <string name="revanced_hide_home_button_summary">Ukrywa przycisk strony głównej w pasku nawigacyjnym.</string>
     <string name="revanced_hide_home_button_title">Ukryj przycisk strony głównej</string>
     <string name="revanced_hide_library_button_summary">Ukrywa przycisk biblioteki w pasku nawigacyjnym.</string>
@@ -128,6 +146,10 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_hide_new_playlist_button_title">Ukryj przycisk nowej playlisty</string>
     <string name="revanced_hide_playlist_card_summary">Ukrywa karty z rekomendowanymi playlistami na stronie głównej.</string>
     <string name="revanced_hide_playlist_card_title">Ukryj karty z rekomendowanymi playlistami</string>
+    <string name="revanced_hide_premium_promotion_summary">Ukrywa wyskakujące okienka promocyjne Premium.</string>
+    <string name="revanced_hide_premium_promotion_title">Ukryj wyskakujące okienka promocyjne Premium</string>
+    <string name="revanced_hide_premium_renewal_summary">Ukrywa baner odnawiania Premium.</string>
+    <string name="revanced_hide_premium_renewal_title">Ukryj baner odnawiania Premium</string>
     <string name="revanced_hide_samples_button_summary">Ukrywa przycisk sampli w pasku nawigacyjnym.</string>
     <string name="revanced_hide_samples_button_title">Ukryj przycisk sampli</string>
     <string name="revanced_hide_terms_container_summary">Ukrywa kontener warunków usług z menu konta.</string>
@@ -139,8 +161,8 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_playback_speed_normal">Normalna</string>
     <string name="revanced_playlist_dismiss">Źródło oryginalnej muzyki już jest odtwarzane.</string>
     <string name="revanced_playlist_error">Oficjalne źródło muzyki jest niedostępne.</string>
-    <string name="revanced_reboot_first_run">Uruchom ponownie, aby załadować układ normalnie</string>
-    <string name="revanced_reboot_message">Odśwież i uruchom ponownie</string>
+    <string name="revanced_restart_first_run">Uruchom ponownie, aby wczytać układ poprawnie</string>
+    <string name="revanced_restart_message">Odśwież i uruchom ponownie</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_summary">Podczas oglądania na YouTube kontynuuj oglądanie od aktualnego czasu.</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_title">Kontynuuj oglądanie</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_summary">Zamienia menu czyszczenia kolejek z oglądaniem na YouTube.</string>
@@ -158,7 +180,12 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_ryd_dislike_percentage_summary">Zamiast ilości łapek w dół, jest wyświetlany ich procent.</string>
     <string name="revanced_ryd_dislike_percentage_title">Łapki w dół wyświetlane jako procent</string>
     <string name="revanced_ryd_enabled_summary">Pokazuje ilość łapek w dół wideo.</string>
+    <string name="revanced_ryd_failure_connection_timeout">Łapki w dół są tymczasowo niedostępne (API nie reaguje).</string>
+    <string name="revanced_ryd_failure_connection_status_code" formatted="false">Liczba łapek w dół nie jest dostępna (status %d).</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">Łapki w dół nie są dostępne (limit API użytkownika został osiągnięty).</string>
+    <string name="revanced_ryd_failure_generic">Liczba łapek w dół nie jest dostępna (%s).</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary">Komunikat wyświetlany w momencie, gdy API ReturnYouTubeDislike jest niedostępne.</string>
+    <string name="revanced_ryd_toast_on_connection_error_title">Pokaż komunikat o niedostępności API</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Ukryte</string>
     <string name="revanced_sanitize_sharing_links_summary">Usuwa parametry śledzących zapytań z adresów URL podczas udostępniania linków.</string>
     <string name="revanced_sanitize_sharing_links_title">Oczyść udostępniane linki</string>
@@ -185,6 +212,8 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="revanced_start_page_title">Strona startowa</string>
     <string name="sb_enabled">Włącz SponsorBlock</string>
     <string name="sb_enabled_sum">SponsorBlock to system pomijania denerwujących fragmentów w wideo na YouTube.</string>
+    <string name="sb_toast_on_connection_error">Pokaż komunikat o niedostępności API</string>
+    <string name="sb_toast_on_connection_error_sum">Komunikat wyświetlany w momencie, gdy SponsorBlock jest niedostępne.</string>
     <string name="sb_toast_on_skip">Pokazuj komunikaty podczas automatycznego pomijania</string>
     <string name="sb_toast_on_skip_sum">Komunikaty są pokazywane, gdy segmenty są automatycznie pomijane.</string>
     <string name="sb_api_url">Zmień adres API</string>
@@ -224,6 +253,9 @@ UWAGA: Nie włączaj nowego tła odtwarzacza, jeśli ta opcja jest włączona."<
     <string name="sb_skipped_multiple_segments">Pominięto wiele segmentów.</string>
     <string name="sb_skip_automatically">Pomiń automatycznie</string>
     <string name="sb_skip_ignore">Wyłącz</string>
+    <string name="sb_sponsorblock_connection_failure_generic">SponsorBlock jest tymczasowo niedostępny.</string>
+    <string name="sb_sponsorblock_connection_failure_status" formatted="false">SponsorBlock jest tymczasowo niedostępny (status %d).</string>
+    <string name="sb_sponsorblock_connection_failure_timeout">SponsorBlock jest tymczasowo niedostępny (API nie reaguje).</string>
     <string name="sb_color_dot_label">Kolor:</string>
     <string name="sb_color_changed">Kolor został zmieniony.</string>
     <string name="sb_color_reset">Kolor został zresetowany.</string>

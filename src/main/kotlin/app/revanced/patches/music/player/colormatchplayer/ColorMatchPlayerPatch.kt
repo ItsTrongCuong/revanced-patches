@@ -1,6 +1,5 @@
 package app.revanced.patches.music.player.colormatchplayer
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -12,9 +11,10 @@ import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.music.player.colormatchplayer.fingerprints.NewPlayerColorFingerprint
 import app.revanced.patches.music.utils.fingerprints.PlayerColorFingerprint
+import app.revanced.patches.music.utils.integrations.Constants.PLAYER
+import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.SettingsPatch
-import app.revanced.util.enum.CategoryType
-import app.revanced.util.integrations.Constants.MUSIC_PLAYER
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.Instruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
@@ -26,17 +26,7 @@ import kotlin.properties.Delegates
     name = "Enable color match player",
     description = "Matches the color of the mini player and the fullscreen player.",
     dependencies = [SettingsPatch::class],
-    compatiblePackages = [
-        CompatiblePackage(
-            "com.google.android.apps.youtube.music",
-            [
-                "6.15.52",
-                "6.20.51",
-                "6.26.51",
-                "6.27.53"
-            ]
-        )
-    ]
+    compatiblePackages = [CompatiblePackage("com.google.android.apps.youtube.music")]
 )
 @Suppress("unused")
 object ColorMatchPlayerPatch : BytecodePatch(
@@ -93,7 +83,7 @@ object ColorMatchPlayerPatch : BytecodePatch(
 
                 addInstructionsWithLabels(
                     insertIndex, """
-                        invoke-static {}, $MUSIC_PLAYER->enableColorMatchPlayer()Z
+                        invoke-static {}, $PLAYER->enableColorMatchPlayer()Z
                         move-result v2
                         if-eqz v2, :off
                         iget v0, p0, $miniPlayerReference1
@@ -128,7 +118,7 @@ object ColorMatchPlayerPatch : BytecodePatch(
 
                     addInstructionsWithLabels(
                         insertIndex, """
-                            invoke-static {}, $MUSIC_PLAYER->enableColorMatchPlayer()Z
+                            invoke-static {}, $PLAYER->enableColorMatchPlayer()Z
                             move-result v1
                             if-eqz v1, :off
                             iget v0, p0, $miniPlayerReference1

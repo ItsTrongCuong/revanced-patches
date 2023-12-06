@@ -1,16 +1,16 @@
 package app.revanced.patches.music.general.landscapemode
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.music.general.landscapemode.fingerprints.TabletIdentifierFingerprint
+import app.revanced.patches.music.utils.integrations.Constants.GENERAL
 import app.revanced.patches.music.utils.resourceid.SharedResourceIdPatch
+import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.SettingsPatch
-import app.revanced.util.enum.CategoryType
-import app.revanced.util.integrations.Constants.MUSIC_GENERAL
+import app.revanced.util.exception
 
 @Patch(
     name = "Enable landscape mode",
@@ -19,17 +19,7 @@ import app.revanced.util.integrations.Constants.MUSIC_GENERAL
         SettingsPatch::class,
         SharedResourceIdPatch::class
     ],
-    compatiblePackages = [
-        CompatiblePackage(
-            "com.google.android.apps.youtube.music",
-            [
-                "6.15.52",
-                "6.20.51",
-                "6.26.51",
-                "6.27.53"
-            ]
-        )
-    ]
+    compatiblePackages = [CompatiblePackage("com.google.android.apps.youtube.music")]
 )
 @Suppress("unused")
 object LandScapeModePatch : BytecodePatch(
@@ -39,7 +29,7 @@ object LandScapeModePatch : BytecodePatch(
         TabletIdentifierFingerprint.result?.let {
             it.mutableMethod.addInstructions(
                 it.scanResult.patternScanResult!!.endIndex + 1, """
-                    invoke-static {p0}, $MUSIC_GENERAL->enableLandScapeMode(Z)Z
+                    invoke-static {p0}, $GENERAL->enableLandScapeMode(Z)Z
                     move-result p0
                     """
             )

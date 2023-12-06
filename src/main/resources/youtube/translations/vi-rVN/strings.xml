@@ -30,7 +30,6 @@
     <string name="revanced_append_time_stamp_information_type_summary_off">- Bật: Chất lượng video.\n- Tắt: Tốc độ phát video.\n- Nhấn và giữ nút Thời gian để chuyển đổi nhanh giữa hai loại thông tin.</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">- Bật: Chất lượng video.\n- Tắt: Tốc độ phát video.\n- Nhấn và giữ nút Thời gian để chuyển đổi nhanh giữa hai loại thông tin.</string>
     <string name="revanced_append_time_stamp_information_type_title">Loại thông tin cần nối</string>
-    <string name="revanced_backup_summary">Nhập cấu hình ReVanced Extended từ tệp đã lưu hoặc xuất cấu hình của bạn sang tệp mới.</string>
     <string name="revanced_bottom_player">Bên dưới trình phát</string>
     <string name="revanced_button_container_title">Bảng nút thao tác</string>
     <string name="revanced_bypass_ambient_mode_restrictions_summary_off">Không giới hạn chế độ môi trường xung quanh đã tắt.</string>
@@ -40,7 +39,13 @@
     <string name="revanced_change_homepage_summary_on">Mở thẻ Kênh đăng ký khi khởi động ứng dụng đã bật.</string>
     <string name="revanced_change_homepage_title">Mở thẻ Kênh đăng ký khi khởi động</string>
     <string name="revanced_channel_bar_title">Thanh kênh</string>
-    <string name="revanced_comments_title">Bình luận</string>
+    <string name="revanced_channel_profile_title">Hồ sơ kênh</string>
+    <string name="revanced_close_interstitial_ads_summary">"Tự động đóng các quảng cáo xen kẽ hiển thị trên toàn màn hình.
+
+Lưu ý: Tính năng này chưa được trải qua kiểm thử."</string>
+    <string name="revanced_close_interstitial_ads_title">Đóng quảng cáo xen kẽ</string>
+    <string name="revanced_close_interstitial_ads_toast">Đóng các quảng cáo xen kẽ.</string>
+    <string name="revanced_comments_title">Phần Bình luận</string>
     <string name="revanced_custom_filter_strings_summary">Nhập tên các mục mà bạn muốn lọc được phân cách bằng dòng.</string>
     <string name="revanced_custom_filter_strings_title">Chỉnh sửa bộ lọc</string>
     <string name="revanced_custom_filter_strings_warning">Bộ lọc tuỳ chỉnh không hợp lệ. Đã đặt lại về mặc định.</string>
@@ -93,7 +98,9 @@
     <string name="revanced_disable_landscape_mode_title">Xem ở chế độ toàn màn hình dọc</string>
     <string name="revanced_disable_quic_protocol_summary">"Tắt giao thức QUIC của CronetEngine để giảm độ trễ khi phát video."</string>
     <string name="revanced_disable_quic_protocol_title">Tắt giao thức QUIC</string>
-    <string name="revanced_disable_speed_overlay_summary">"Tắt tính năng Nhấn và giữ trong trình phát để xem ở tốc độ nhanh hơn 2 lần."</string>
+    <string name="revanced_disable_speed_overlay_summary">"Tắt tính năng Nhấn và giữ trong trình phát để xem ở tốc độ nhanh hơn 2 lần.
+
+Lưu ý: Bật tuỳ chọn này sẽ khôi phục tính năng Trượt để tua của bố cục cũ."</string>
     <string name="revanced_disable_speed_overlay_title">Tắt nhấn và giữ để phát nhanh gấp đôi</string>
     <string name="revanced_disable_startup_shorts_player_summary_off">Đang mở thẻ Shorts để phát video ngắn khi khởi động nếu bạn đóng ứng dụng trong lúc xem một video ngắn trước đó.</string>
     <string name="revanced_disable_startup_shorts_player_summary_on">Không mở thẻ Shorts để phát video ngắn khi khởi động ứng dụng.</string>
@@ -124,9 +131,9 @@
     <string name="revanced_enable_language_switch_summary_off">Cho phép thay đổi ngôn ngữ đã tắt.</string>
     <string name="revanced_enable_language_switch_summary_on">Đang cho phép thay đổi ngôn ngữ hiển thị trong ứng dụng thông qua phần Cài đặt Chung của YouTube.</string>
     <string name="revanced_enable_language_switch_title">Cho phép thay đổi ngôn ngữ</string>
-    <string name="revanced_enable_music_search_summary_off">Tìm kiếm nhạc đã tắt.</string>
-    <string name="revanced_enable_music_search_summary_on">Tìm kiếm nhạc đã bật.</string>
-    <string name="revanced_enable_music_search_title">Tìm kiếm nhạc</string>
+    <string name="revanced_enable_music_search_summary_off">Tìm kiếm bài hát đã tắt.</string>
+    <string name="revanced_enable_music_search_summary_on">Tìm kiếm bài hát đã bật.</string>
+    <string name="revanced_enable_music_search_title">Tìm kiếm bài hát</string>
     <string name="revanced_enable_new_splash_animation_summary_off">Ảnh động khởi chạy kiểu mới đã tắt.</string>
     <string name="revanced_enable_new_splash_animation_summary_on">Ảnh động khởi chạy kiểu mới đã bật.</string>
     <string name="revanced_enable_new_splash_animation_title">Ảnh động khởi chạy kiểu mới</string>
@@ -158,6 +165,12 @@
     <string name="revanced_enable_swipe_brightness_summary_off">Cử chỉ vuốt Độ sáng đã tắt.</string>
     <string name="revanced_enable_swipe_brightness_summary_on">Cử chỉ vuốt Độ sáng đã bật.</string>
     <string name="revanced_enable_swipe_brightness_title">Vuốt Độ sáng</string>
+    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Phản hồi xúc giác đã tắt.</string>
+    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Phản hồi xúc giác đã bật.</string>
+    <string name="revanced_enable_swipe_haptic_feedback_title">Phản hồi xúc giác</string>
+    <string name="revanced_enable_swipe_press_to_engage_summary_off">Nhấn và giữ để vuốt đã tắt.</string>
+    <string name="revanced_enable_swipe_press_to_engage_summary_on">Nhấn và giữ để kích hoạt cử chỉ vuốt.</string>
+    <string name="revanced_enable_swipe_press_to_engage_title">Nhấn và giữ để vuốt</string>
     <string name="revanced_enable_swipe_volume_summary_off">Cử chỉ vuốt Âm lượng đã tắt.</string>
     <string name="revanced_enable_swipe_volume_summary_on">Cử chỉ vuốt Âm lượng đã bật.</string>
     <string name="revanced_enable_swipe_volume_title">Vuốt Âm lượng</string>
@@ -183,17 +196,38 @@ Lưu ý: Bật tuỳ chọn này sẽ ẩn nút Cài đặt trong thẻ Bạn. T
 Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_enable_wide_search_bar_in_you_tab_title">Thanh tìm kiếm rộng trên thẻ Bạn</string>
     <string name="revanced_experimental_flag">Tính năng thử nghiệm</string>
-    <string name="revanced_export_settings_summary">Xuất cấu hình ReVanced Extended của bạn sang tệp JSON.</string>
-    <string name="revanced_export_settings_title">Xuất cài đặt</string>
+    <string name="revanced_extended_settings_export_failed">Xuất cài đặt thất bại.</string>
+    <string name="revanced_extended_settings_export_success">Cài đặt đã được xuất thành công.</string>
+    <string name="revanced_extended_settings_export_summary">Xuất toàn bộ cài đặt của bạn dưới dạng tệp JSON.</string>
+    <string name="revanced_extended_settings_export_title">Xuất cài đặt</string>
+    <string name="revanced_extended_settings_import">Nhập</string>
+    <string name="revanced_extended_settings_import_copy">Sao chép</string>
+    <string name="revanced_extended_settings_import_export_as_file_title">Nhập/Xuất dưới dạng tệp</string>
+    <string name="revanced_extended_settings_import_export_as_text_summary">Nhập hoặc xuất toàn bộ cài đặt của bạn dưới dạng văn bản.</string>
+    <string name="revanced_extended_settings_import_export_as_text_title">Nhập/Xuất dưới dạng văn bản</string>
+    <string name="revanced_extended_settings_import_export_summary">Nhập hoặc xuất toàn bộ cài đặt ReVanced Extended của bạn, bao gồm cả cài đặt Return YouTube Dislike và SponsorBlock.</string>
+    <string name="revanced_extended_settings_import_export_title">Nhập/Xuất cài đặt</string>
+    <string name="revanced_extended_settings_import_failed">Nhập cài đặt thất bại.</string>
+    <string name="revanced_extended_settings_import_reset">Đặt lại</string>
+    <string name="revanced_extended_settings_import_success">Cài đặt đã được nhập thành công.</string>
+    <string name="revanced_extended_settings_import_summary">Nhập cài đặt ReVanced Extended từ tệp đã lưu.</string>
+    <string name="revanced_extended_settings_import_title">Nhập cài đặt</string>
+    <string name="revanced_external_downloader_download">Tải ứng dụng</string>
     <string name="revanced_external_downloader_installed">Đã cài đặt</string>
     <string name="revanced_external_downloader_not_installed">Chưa được cài đặt</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s chưa được cài đặt. Hãy cài đặt và thử lại.</string>
     <string name="revanced_external_downloader_package_name_summary">Chọn trình tải xuống bên dưới hoặc nhập tên gói ứng dụng trình tải xuống đã cài đặt trên thiết bị của bạn.</string>
     <string name="revanced_external_downloader_package_name_title">Tên gói ứng dụng trình tải xuống</string>
+    <string name="revanced_external_downloader_set">Đặt làm trình tải xuống mặc định</string>
     <string name="revanced_external_downloader_settings_summary">Các thiết lập trình tải xuống bên ngoài.</string>
     <string name="revanced_external_downloader_settings_title">Trình tải xuống</string>
     <string name="revanced_feed_flyout_panel_title">Trình đơn trên các trang video</string>
     <string name="revanced_flyout_menu">Trình đơn tuỳ chọn</string>
+    <string name="revanced_force_fullscreen_summary">"Bắt buộc video chuyển sang chế độ toàn màn hình trong các trường hợp sau:
+
+- Nhấn vào dấu thời gian trong phần Bình luận.
+- Video bắt đầu phát."</string>
+    <string name="revanced_force_fullscreen_title">Buộc áp dụng chế độ toàn màn hình</string>
     <string name="revanced_fullscreen">Chế độ toàn màn hình</string>
     <string name="revanced_general">Chung</string>
     <string name="revanced_haptic_feedback_title">Phản hồi xúc giác</string>
@@ -314,6 +348,9 @@ Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_hide_create_button_summary_off">Nút Tạo được hiển thị.</string>
     <string name="revanced_hide_create_button_summary_on">Nút Tạo đã ẩn.</string>
     <string name="revanced_hide_create_button_title">Ẩn nút Tạo</string>
+    <string name="revanced_hide_create_shorts_button_summary_off">Nút Tạo video ngắn được hiển thị.</string>
+    <string name="revanced_hide_create_shorts_button_summary_on">Nút Tạo video ngắn đã ẩn.</string>
+    <string name="revanced_hide_create_shorts_button_title">Ẩn nút Tạo video ngắn</string>
     <string name="revanced_hide_crowdfunding_box_summary_off">Chiến dịch gây quỹ được hiển thị.</string>
     <string name="revanced_hide_crowdfunding_box_summary_on">Chiến dịch gây quỹ đã ẩn.</string>
     <string name="revanced_hide_crowdfunding_box_title">Ẩn chiến dịch gây quỹ</string>
@@ -342,6 +379,9 @@ Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_hide_floating_microphone_summary_off">Nút Micrô nổi được hiển thị khi tìm kiếm.</string>
     <string name="revanced_hide_floating_microphone_summary_on">Nút Micrô nổi đã ẩn khi tìm kiếm.</string>
     <string name="revanced_hide_floating_microphone_title">Ẩn nút Micrô nổi</string>
+    <string name="revanced_hide_for_you_shelf_summary_off">"Kệ Dành cho bạn được hiển thị."</string>
+    <string name="revanced_hide_for_you_shelf_summary_on">"Kệ Dành cho bạn đã ẩn."</string>
+    <string name="revanced_hide_for_you_shelf_title">"Ẩn kệ Dành cho bạn"</string>
     <string name="revanced_hide_fullscreen_panels_summary_off">Đang phát video ở chế độ toàn màn hình mặc định.</string>
     <string name="revanced_hide_fullscreen_panels_summary_on">Đang phát video ở chế độ toàn màn hình tối giản.</string>
     <string name="revanced_hide_fullscreen_panels_title">Xem ở chế độ toàn màn hình tối giản</string>
@@ -411,6 +451,9 @@ Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_hide_navigation_label_summary_off">Tên thẻ được hiển thị trên thanh điều hướng.</string>
     <string name="revanced_hide_navigation_label_summary_on">Tên thẻ đã ẩn khỏi thanh điều hướng.</string>
     <string name="revanced_hide_navigation_label_title">Ẩn tên thẻ</string>
+    <string name="revanced_hide_notifications_button_summary_off">Nút Thông báo được hiển thị.</string>
+    <string name="revanced_hide_notifications_button_summary_on">Nút Thông báo đã ẩn.</string>
+    <string name="revanced_hide_notifications_button_title">Ẩn nút Thông báo</string>
     <string name="revanced_hide_notify_me_button_summary_off">Nút Thông báo cho tôi được hiển thị bên dưới video sắp xuất bản.</string>
     <string name="revanced_hide_notify_me_button_summary_on">Nút Thông báo cho tôi đã ẩn bên dưới video sắp xuất bản.</string>
     <string name="revanced_hide_notify_me_button_title">Ẩn nút Thông báo cho tôi</string>
@@ -420,9 +463,6 @@ Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_hide_place_section_summary_off">Phần Địa điểm nổi bật được hiển thị.</string>
     <string name="revanced_hide_place_section_summary_on">Phần Địa điểm nổi bật đã ẩn.</string>
     <string name="revanced_hide_place_section_title">Ẩn phần Địa điểm nổi bật</string>
-    <string name="revanced_hide_player_button_background_summary_off">Nền của các nút điều khiển trình phát được hiển thị.</string>
-    <string name="revanced_hide_player_button_background_summary_on">Nền của các nút điều khiển trình phát đã ẩn.</string>
-    <string name="revanced_hide_player_button_background_title">Ẩn nền các nút điều khiển trình phát</string>
     <string name="revanced_hide_player_flyout_panel_ambient_mode_summary_off">Mục Chế độ môi trường xung quanh được hiển thị.</string>
     <string name="revanced_hide_player_flyout_panel_ambient_mode_summary_on">Mục Chế độ môi trường xung quanh đã ẩn.</string>
     <string name="revanced_hide_player_flyout_panel_ambient_mode_title">Ẩn mục Chế độ môi trường xung quanh</string>
@@ -471,6 +511,9 @@ Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_hide_player_flyout_panel_watch_in_vr_summary_off">Mục Xem ở chế độ thực tế ảo được hiển thị.</string>
     <string name="revanced_hide_player_flyout_panel_watch_in_vr_summary_on">Mục Xem ở chế độ thực tế ảo đã ẩn.</string>
     <string name="revanced_hide_player_flyout_panel_watch_in_vr_title">Ẩn mục Xem ở chế độ thực tế ảo</string>
+    <string name="revanced_hide_podcast_section_summary_off">Phần Khám phá podcast được hiển thị.</string>
+    <string name="revanced_hide_podcast_section_summary_on">Phần Khám phá podcast đã ẩn.</string>
+    <string name="revanced_hide_podcast_section_title">Ẩn phần Khám phá podcast</string>
     <string name="revanced_hide_preview_comment_off">Phần xem trước bình luận được hiển thị.</string>
     <string name="revanced_hide_preview_comment_on">Phần xem trước bình luận đã ẩn.</string>
     <string name="revanced_hide_preview_comment_title">Ẩn phần xem trước bình luận</string>
@@ -510,6 +553,9 @@ Thẻ Bạn &gt; Xem kênh &gt; Trình đơn &gt; Cài đặt."</string>
     <string name="revanced_hide_self_sponsor_cards_summary_off">Thẻ được tài trợ được hiển thị.</string>
     <string name="revanced_hide_self_sponsor_cards_summary_on">Thẻ được tài trợ đã ẩn.</string>
     <string name="revanced_hide_self_sponsor_cards_title">Ẩn thẻ được tài trợ</string>
+    <string name="revanced_hide_shopping_links_summary_off">Phần Sản phẩm được hiển thị.</string>
+    <string name="revanced_hide_shopping_links_summary_on">Phần Sản phẩm đã ẩn.</string>
+    <string name="revanced_hide_shopping_links_title">Ẩn phần Sản phẩm</string>
     <string name="revanced_hide_shorts_button_summary_off">Thẻ Shorts được hiển thị.</string>
     <string name="revanced_hide_shorts_button_summary_on">Thẻ Shorts đã ẩn.</string>
     <string name="revanced_hide_shorts_button_title">Ẩn thẻ Shorts</string>
@@ -559,6 +605,16 @@ Sự cố đã biết: Tiêu đề của thẻ chính chức bị ẩn khỏi k�
 
 Sự cố đã biết: Tính năng Tự động phát không hoạt động."</string>
     <string name="revanced_hide_suggested_video_overlay_title">Ẩn lớp phủ video đề xuất</string>
+    <string name="revanced_hide_suggestions_shelf_method_summary_off">"Ẩn bằng cách nhận dạng các kệ đề xuất thông qua ID Browse.
+
+Sự cố đã biết:
+- Kệ đề xuất có thể không bị ẩn nếu không nhận dạng được ID Browse."</string>
+    <string name="revanced_hide_suggestions_shelf_method_summary_on">"Ẩn bằng cách nhận dạng các kệ đề xuất thông qua thẻ hiện tại.
+
+Sự cố đã biết:
+- Nhiều kệ khác có thể bị ẩn.
+- Các kệ danh sách phát có thể bị ẩn."</string>
+    <string name="revanced_hide_suggestions_shelf_method_title">Chọn cách ẩn</string>
     <string name="revanced_hide_suggestions_shelf_summary">"Ẩn các kệ đề xuất sau:
 - Tin nổi bật.
 - Tiếp tục xem.
@@ -602,12 +658,6 @@ Sự cố đã biết: Tính năng Tự động phát không hoạt động."</s
     <string name="revanced_hide_youtube_music_button_title">Ẩn nút YouTube Music</string>
     <string name="revanced_hook_download_button_summary">"Thay thế chức năng của nút Tải xuống bằng nút Tải xuống bên ngoài."</string>
     <string name="revanced_hook_download_button_title">Thay thế nút Tải xuống</string>
-    <string name="revanced_import_settings_inform">"Thiết lập cho các tuỳ chọn sau có thể không được nhập, vì vậy hãy mở cài đặt ReVanced Extended một lần sau khi nhập cài đặt:
-
-- Ẩn danh mục Cài đặt bổ sung (Trình đơn Cài đặt trình phát).
-- Ẩn thanh công cụ Shorts."</string>
-    <string name="revanced_import_settings_summary">Nhập cấu hình ReVanced Extended từ tệp JSON đã lưu.</string>
-    <string name="revanced_import_settings_title">Nhập cài đặt</string>
     <string name="revanced_inform">Thông tin</string>
     <string name="revanced_layout_title">Bố cục</string>
     <string name="revanced_misc">Khác</string>
@@ -617,8 +667,7 @@ Sự cố đã biết: Tính năng Tự động phát không hoạt động."</s
     <string name="revanced_open_library_you_startup_title">Mở thẻ Thư viện/Bạn khi khởi động</string>
     <string name="revanced_others">Khác</string>
     <string name="revanced_overlay_button">Nút trên lớp phủ trình phát</string>
-    <string name="revanced_overlay_button_always_repeat_summary">"- Nhấn để luôn phát lặp lại một video.
-- Nhấn và giữ để tạm dừng sau khi phát hết video."</string>
+    <string name="revanced_overlay_button_always_repeat_summary">Nhấn để luôn phát lặp lại một video.</string>
     <string name="revanced_overlay_button_always_repeat_title">Nút Phát lặp lại một video</string>
     <string name="revanced_overlay_button_copy_video_url_summary">"- Nhấn để sao chép URL video.
 - Nhấn và giữ để sao chép URL video trong thời gian hiện tại."</string>
@@ -643,7 +692,8 @@ Sự cố đã biết: Tính năng Tự động phát không hoạt động."</s
     <string name="revanced_quick_actions_margin_top_title">Lề trên bảng nút thao tác nhanh</string>
     <string name="revanced_quick_actions_margin_top_warning">Lề trên của bảng nút thao tác nhanh phải nằm trong khoảng 0 - 64. Đã đặt lại về giá trị mặc định.</string>
     <string name="revanced_quick_actions_title">Bảng nút thao tác nhanh</string>
-    <string name="revanced_reboot_first_run">Vui lòng khởi động lại ứng dụng trong lần đầu khởi chạy để các tính năng hoạt động bình thường</string>
+    <string name="revanced_restart_first_run">Vui lòng khởi động lại ứng dụng để các tính năng hoạt động bình thường</string>
+    <string name="revanced_restart_message">Làm mới và khởi động lại</string>
     <string name="revanced_ryd_about">Giới thiệu</string>
     <string name="revanced_ryd_attribution_summary">Dữ liệu về số lượt không thích được cung cấp bởi API Return YouTube Dislike. Nhấn vào đây để tìm hiểu thêm.</string>
     <string name="revanced_ryd_compact_layout_summary_off">Nút Thích được thiết kế để đồng bộ khả năng hiển thị với nút Không thích.</string>
@@ -655,10 +705,17 @@ Sự cố đã biết: Tính năng Tự động phát không hoạt động."</s
     <string name="revanced_ryd_enable_summary_off">Số lượt không thích đã ẩn.</string>
     <string name="revanced_ryd_enable_summary_on">Số lượt không thích được hiển thị.</string>
     <string name="revanced_ryd_enable_title">Hiện số lượt không thích</string>
+    <string name="revanced_ryd_failure_connection_timeout">Số lượt không thích tạm thời không khả dụng (API đã hết thời gian chờ).</string>
+    <string name="revanced_ryd_failure_connection_status_code" formatted="false">Số lượt không thích không khả dụng (trạng thái %d).</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">Số lượt không thích không khả dụng (đã đạt đến giới hạn API máy khách).</string>
+    <string name="revanced_ryd_failure_generic">Số lượt không thích không khả dụng (%s).</string>
+    <string name="revanced_ryd_shorts_summary_disclaimer">Lưu ý: Số lượt không thích có thể không hiển thị trong một số trường hợp.</string>
     <string name="revanced_ryd_shorts_summary_off">Số lượt không thích đã ẩn khỏi trình phát Shorts.</string>
-    <string name="revanced_ryd_shorts_summary_on">Số lượt không thích được hiển thị trong trình phát Shorts.</string>
+    <string name="revanced_ryd_shorts_summary_on">Số lượt không thích được hiển thị trong trình phát Shorts. %s</string>
     <string name="revanced_ryd_shorts_title">Hiện số lượt không thích trong Shorts</string>
+    <string name="revanced_ryd_toast_on_connection_error_title">Thông báo ngắn nếu API không khả dụng</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary_off">Thông báo ngắn nếu API không khả dụng đã tắt.</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary_on">Hiển thị thông báo ngắn nếu API ReturnYouTubeDislike không khả dụng.</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Ẩn</string>
     <string name="revanced_sanitize_sharing_links_summary">Loại bỏ các tham số truy vấn theo dõi khỏi URL khi chia sẻ liên kết.</string>
     <string name="revanced_sanitize_sharing_links_title">Liên kết sạch khi chia sẻ</string>
@@ -667,12 +724,13 @@ Sự cố đã biết: Tính năng Tự động phát không hoạt động."</s
     <string name="revanced_save_video_quality_none">Lưu chất lượng video thất bại.</string>
     <string name="revanced_save_video_quality_wifi" formatted="false">Đã lưu chất lượng video trên mạng Wi-Fi thành %s.</string>
     <string name="revanced_seekbar">Thanh tiến trình</string>
+    <string name="revanced_share_copy_settings_success">Đã sao chép cài đặt sang bảng nhớ tạm.</string>
     <string name="revanced_share_copy_timestamp_success" formatted="false">Đã sao chép dấu thời gian sang bảng nhớ tạm. (%s)</string>
     <string name="revanced_share_copy_url_success">Đã sao chép URL sang bảng nhớ tạm.</string>
     <string name="revanced_share_copy_url_timestamp_success">Đã sao chép liên kết với dấu thời gian sang bảng nhớ tạm.</string>
     <string name="revanced_shorts">Shorts</string>
     <string name="revanced_shorts_player_title">Trình phát Shorts</string>
-    <string name="revanced_shorts_toolbar_summary">Để ẩn thanh công cụ Shorts, hãy ẩn tất cả các thành phần của thanh công cụ này.</string>
+    <string name="revanced_shorts_toolbar_summary">Nút Quay lại trên thanh công cụ Shorts không thể ẩn.</string>
     <string name="revanced_shorts_toolbar_title">Thanh công cụ Shorts</string>
     <string name="revanced_show_fullscreen_title_summary">Hiển thị tiêu đề khi phát video ở chế độ toàn màn hình tối giản.\n\nSự cố đã biết: Tiêu đề đột ngột biến mất khi nhấn vào.</string>
     <string name="revanced_show_fullscreen_title_title">Hiện tiêu đề</string>
@@ -680,7 +738,7 @@ Sự cố đã biết: Tính năng Tự động phát không hoạt động."</s
     <string name="revanced_skip_preloaded_buffer_summary">"Bỏ qua bộ đệm tải trước để tránh thời gian chờ áp dụng chất lượng video mặc định.
 
 Lưu ý:\n- Khi bạn nhấn nút Phát, sẽ có một độ trễ khoảng 0.7 giây trước khi video bắt đầu phát, tuy nhiên chất lượng video mặc định vẫn được áp dụng ngay lập tức.
-- Tuỳ chọn này không áp dụng cho video HDR và video có thời lượng dưới 10 giây."</string>
+- Tuỳ chọn này không áp dụng cho video HDR, video có thời lượng dưới 10 giây, sự kiện trực tiếp và buổi công chiếu."</string>
     <string name="revanced_skip_preloaded_buffer_title">Bỏ qua bộ đệm tải trước</string>
     <string name="revanced_skip_preloaded_buffer_toast_summary_off">Thông báo ngắn đã ẩn khi bỏ qua bộ đệm tải trước.</string>
     <string name="revanced_skip_preloaded_buffer_toast_summary_on">Thông báo ngắn được hiển thị khi bỏ qua bộ đệm tải trước.</string>
@@ -689,13 +747,13 @@ Lưu ý:\n- Khi bạn nhấn nút Phát, sẽ có một độ trễ khoảng 0.7
 
 Lưu ý:\n- Tuỳ chọn này sẽ thay đổi giao diện ứng dụng, tuy nhiên có thể xảy ra các sự cố chưa xác định khác.
 - Nếu tắt tuỳ chọn này sau đó, giao diện cũ có thể vẫn tồn tại cho đến khi bạn xoá dữ liệu ứng dụng."</string>
-    <string name="revanced_spoof_app_version_target_entry_16_08_35">16.08.35 - Khôi phục thẻ Khám phá</string>
     <string name="revanced_spoof_app_version_target_entry_17_08_35">17.08.35 - Khôi phục giao diện YouTube kiểu cũ</string>
     <string name="revanced_spoof_app_version_target_entry_17_41_37">17.41.37 - Khôi phục kệ Danh sách phát kiểu cũ</string>
     <string name="revanced_spoof_app_version_target_entry_18_01_38">"18.01.38 - Loại bỏ phần Bình luận của hội viên"</string>
     <string name="revanced_spoof_app_version_target_entry_18_05_40">18.05.40 - Khôi phục hộp Viết bình luận kiểu cũ</string>
     <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Khôi phục trình đơn Cài đặt trình phát kiểu cũ</string>
     <string name="revanced_spoof_app_version_target_entry_18_33_40">18.33.40 - Khôi phục bảng nút thao tác Shorts kiểu cũ</string>
+    <string name="revanced_spoof_app_version_target_entry_18_38_45">18.38.45 - Khôi phục phương thức áp dụng chất lượng video mặc định kiểu cũ</string>
     <string name="revanced_spoof_app_version_target_entry_18_40_34">"18.40.34 - Tắt số lượt xem và lượt thích được cập nhật theo thời gian thực"</string>
     <string name="revanced_spoof_app_version_target_entry_title">Phiên bản giả mạo</string>
     <string name="revanced_spoof_app_version_target_summary">Nhập phiên bản YouTube mà bạn muốn giả mạo.</string>
@@ -718,6 +776,9 @@ Sự cố đã biết:
 - Tải video xuống để xem khi không có mạng, Xem tiếp có thể không hoạt động."</string>
     <string name="revanced_spoof_player_parameter_title">Giả mạo thông số trình phát</string>
     <string name="revanced_swipe_controls">Điều khiển bằng cử chỉ vuốt</string>
+    <string name="revanced_swipe_gestures_lock_mode_summary_off">"Vuốt ở chế độ Khoá màn hình đã tắt."</string>
+    <string name="revanced_swipe_gestures_lock_mode_summary_on">"Cử chỉ vuốt đã bật ở chế độ Khoá màn hình."</string>
+    <string name="revanced_swipe_gestures_lock_mode_title">"Vuốt ở chế độ Khoá màn hình"</string>
     <string name="revanced_swipe_magnitude_threshold_summary">Độ rộng của ngưỡng vuốt để thực hiện cử chỉ vuốt.</string>
     <string name="revanced_swipe_magnitude_threshold_title">Độ rộng ngưỡng vuốt</string>
     <string name="revanced_swipe_overlay_background_alpha_summary">Độ mờ của nền lớp phủ vuốt khi thực hiện cử chỉ vuốt.</string>
@@ -726,7 +787,10 @@ Sự cố đã biết:
     <string name="revanced_swipe_overlay_text_size_title">Kích thước văn bản trên lớp phủ vuốt</string>
     <string name="revanced_swipe_overlay_timeout_summary">Số mili giây mà lớp phủ vuốt được hiển thị.</string>
     <string name="revanced_swipe_overlay_timeout_title">Thời gian hiển thị lớp phủ vuốt (mili giây)</string>
-    <string name="revanced_switching_create_notification_summary">Lưu ý: Nếu tuỳ chọn này không được áp dụng chính xác, hãy khởi động lại thiết bị.</string>
+    <string name="revanced_switching_create_notification_summary">"Hoán đổi vị trí của nút Tạo và nút Thông báo bằng cách giả mạo thông tin thiết bị.
+
+Lưu ý:
+- Ngay cả khi thay đổi, tuỳ chọn này vẫn có thể không hoạt động cho đến khi bạn khởi động lại thiết bị.\n- Nếu tắt tuỳ chọn này, bạn có thể nhìn thấy quảng cáo dạng video."</string>
     <string name="revanced_switching_create_notification_title">Chuyển vị trí giữa nút Tạo và nút Thông báo</string>
     <string name="revanced_tool_used">Công cụ sử dụng</string>
     <string name="revanced_video">Video</string>
@@ -764,6 +828,9 @@ Sự cố đã biết:
     <string name="sb_guidelines_popup_already_read">Đã xem</string>
     <string name="sb_guidelines_popup_open">Xem ngay</string>
     <string name="sb_general">Chung</string>
+    <string name="sb_toast_on_connection_error_title">Thông báo ngắn nếu API không khả dụng</string>
+    <string name="sb_toast_on_connection_error_summary_on">Hiển thị thông báo ngắn nếu API SponsorBlock không khả dụng.</string>
+    <string name="sb_toast_on_connection_error_summary_off">Thông báo ngắn nếu API không khả dụng đã tắt.</string>
     <string name="sb_general_skipcount">Theo dõi số lượng phân đoạn đã bỏ qua</string>
     <string name="sb_general_skipcount_sum_on">Tuỳ chọn này cho phép hệ thống xếp hạng của SponsorBlock biết mọi người đã tiết kiệm được bao nhiêu thời gian. Tiện ích sẽ gửi thông tin đến máy chủ mỗi khi bạn bỏ qua một phân đoạn.</string>
     <string name="sb_general_skipcount_sum_off">Theo dõi số lượng phân đoạn đã bỏ qua đã tắt.</string>
@@ -778,11 +845,13 @@ Sự cố đã biết:
     <string name="sb_api_url_invalid">URL API SponsorBlock không hợp lệ.</string>
     <string name="sb_api_url_changed">Đã thay đổi URL API SponsorBlock.</string>
     <string name="sb_settings_copy">Sao chép</string>
-    <string name="sb_settings_ie_sum">Đây là toàn bộ cấu hình SponsorBlock của bạn (có thể nhập/xuất sang ReVanced và các nền tảng SponsorBlock khác) dưới dạng chuỗi JSON. Chuỗi này bao gồm cả ID người dùng riêng tư của bạn, vì vậy hãy thận trọng khi chia sẻ nó.</string>
+    <string name="sb_settings_ie_sum">Cài đặt SponsorBlock của bạn dưới dạng chuỗi JSON có thể nhập/xuất sang ReVanced Extended và các nền tảng SponsorBlock khác. %s</string>
+    <string name="sb_settings_ie_sum_warning">Chuỗi JSON này chứa ID người dùng riêng tư của bạn. Hãy thận trọng khi chia sẻ nó.</string>
+    <string name="sb_settings_ie">Nhập/Xuất cài đặt</string>
     <string name="sb_settings_import_successful">Nhập cài đặt thành công.</string>
     <string name="sb_settings_import_failed">Nhập cài đặt thất bại: %s.</string>
     <string name="sb_settings_export_failed">Xuất cài đặt thất bại: %s.</string>
-    <string name="sb_settings_revanced_export_user_id_warning">Cấu hình SponsorBlock của bạn có chứa ID người dùng riêng tư.\n\nMã ID này cũng giống như mật khẩu của bạn, nên được giữ riêng tư và không bao giờ chia sẻ với bất kỳ ai.\n</string>
+    <string name="sb_settings_revanced_export_user_id_warning">Cài đặt của bạn có chứa ID người dùng riêng tư SponsorBlock.\n\nGiống như mật khẩu, mã ID này nên được giữ kín và không bao giờ chia sẻ với bất kỳ ai.\n</string>
     <string name="sb_settings_revanced_export_user_id_warning_dismiss">Không hiển thị lại</string>
     <string name="sb_diff_segments">Phân đoạn</string>
     <string name="sb_segments_sponsor">Nhà tài trợ</string>
@@ -831,6 +900,9 @@ Sự cố đã biết:
     <string name="sb_skip_showbutton">Hiển thị nút Bỏ qua</string>
     <string name="sb_skip_seekbaronly">Hiển thị trên thanh tiến trình</string>
     <string name="sb_skip_ignore">Tắt</string>
+    <string name="sb_sponsorblock_connection_failure_generic">SponsorBlock tạm thời không khả dụng.</string>
+    <string name="sb_sponsorblock_connection_failure_status" formatted="false">SponsorBlock tạm thời không khả dụng (trạng thái %d).</string>
+    <string name="sb_sponsorblock_connection_failure_timeout">SponsorBlock tạm thời không khả dụng (API đã hết thời gian chờ).</string>
     <string name="sb_submit_failed_invalid" formatted="false">Không thể gửi phân đoạn: %s.</string>
     <string name="sb_submit_failed_timeout">Không thể gửi phân đoạn (API đã hết thời gian chờ).</string>
     <string name="sb_submit_failed_unknown_error" formatted="false">Không thể gửi phân đoạn (trạng thái: %d %s).</string>
@@ -838,6 +910,7 @@ Sự cố đã biết:
     <string name="sb_submit_failed_forbidden" formatted="false">Không thể gửi phân đoạn: %s.</string>
     <string name="sb_submit_failed_duplicate">Không thể gửi phân đoạn.\nĐã tồn tại.</string>
     <string name="sb_submit_succeeded">Đã gửi phân đoạn thành công.</string>
+    <string name="sb_vote_failed_timeout">Không thể bình chọn cho phân đoạn (API đã hết thời gian chờ).</string>
     <string name="sb_vote_failed_unknown_error" formatted="false">Không thể bình chọn cho phân đoạn (trạng thái: %d%s).</string>
     <string name="sb_vote_failed_forbidden" formatted="false">Không thể bình chọn cho phân đoạn: %s.</string>
     <string name="sb_vote_upvote">Ủng hộ</string>
@@ -888,9 +961,4 @@ Sự cố đã biết:
     <string name="sb_about">Giới thiệu</string>
     <string name="sb_reset">Đặt lại</string>
     <string name="sb_about_api_sum">Dữ liệu được cung cấp bởi API SponsorBlock. Nhấn vào đây để tìm hiểu thêm.</string>
-    <string name="settings_export_failed">Xuất cài đặt thất bại.</string>
-    <string name="settings_export_successful">Cài đặt đã được xuất thành công.</string>
-    <string name="settings_ie">Nhập/Xuất cài đặt</string>
-    <string name="settings_import_failed">Nhập cài đặt thất bại.</string>
-    <string name="settings_import_successful">Cài đặt đã được nhập thành công.</string>
 </resources>

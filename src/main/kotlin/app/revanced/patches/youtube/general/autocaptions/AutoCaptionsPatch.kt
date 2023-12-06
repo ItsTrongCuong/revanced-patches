@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.general.autocaptions
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -13,10 +12,11 @@ import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.shared.fingerprints.captions.SubtitleTrackFingerprint
 import app.revanced.patches.youtube.general.autocaptions.fingerprints.StartVideoInformerFingerprint
 import app.revanced.patches.youtube.utils.fingerprints.SubtitleButtonControllerFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.GENERAL
 import app.revanced.patches.youtube.utils.playertype.PlayerTypeHookPatch
 import app.revanced.patches.youtube.utils.resourceid.SharedResourceIdPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.GENERAL
+import app.revanced.util.exception
 
 @Patch(
     name = "Disable auto captions",
@@ -46,7 +46,9 @@ import app.revanced.util.integrations.Constants.GENERAL
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]

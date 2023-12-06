@@ -5,7 +5,6 @@
     <string name="pref_app_language_dialog_message_no_lang_name">This will change the language used in the app including buttons, text and dialogs, but will not change the language of ReVanced Extended settings.</string>
     <string name="pref_app_language_system_default">System default</string>
 
-    <string name="revanced_backup_title">@string/settings_ie</string>
     <string name="revanced_extended_settings_title">ReVanced Extended</string>
 
     <string name="revanced_hide_account_menu_filter_strings_summary">@string/revanced_custom_filter_strings_summary</string>
@@ -64,6 +63,7 @@
     <string name="revanced_hide_subscriptions_button_title">@string/revanced_hide_shorts_player_subscriptions_button_title</string>
 
     <string name="revanced_header_default">Stock</string>
+    <string name="revanced_icon_custom">Custom</string>
     <string name="revanced_icon_default">Stock</string>
     <string name="revanced_icon_mmt">MMT</string>
     <string name="revanced_icon_revancify_blue">Revancify Blue</string>
@@ -74,12 +74,7 @@
     <string name="revanced_patches_included">Included</string>
     <string name="revanced_playback_speed_normal">@string/shorts_speed_control_normal_label</string>
 
-    <string name="revanced_ryd_about">@string/pref_about_category</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
-
-    <string name="revanced_ryd_failure_connection_timeout">Dislikes temporarily not available (API timed out)</string>
-    <string name="revanced_ryd_failure_connection_status_code" formatted="false">Dislikes not available (status %d)</string>
-    <string name="revanced_ryd_failure_generic">Dislikes not available (%s)</string>
 
     <string name="revanced_ryd_settings_title">Return YouTube Dislike</string>
 
@@ -87,7 +82,6 @@
 
     <string name="revanced_theme_default">Stock</string>
 
-    <string name="sb_about">@string/pref_about_category</string>
     <string name="sb_about_api">sponsor.ajay.app</string>
     <string name="sb_skip_button_intro_middle">@string/sb_skip_button_intro_beginning</string>
     <string name="sb_skip_button_intro_end">@string/sb_skip_button_intro_beginning</string>

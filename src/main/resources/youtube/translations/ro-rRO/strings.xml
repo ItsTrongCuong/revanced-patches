@@ -30,7 +30,6 @@
     <string name="revanced_append_time_stamp_information_type_summary_off">Aplică viteza redării</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Aplică calitatea redării video</string>
     <string name="revanced_append_time_stamp_information_type_title">Adaugă tip de informații</string>
-    <string name="revanced_backup_summary">Importă setările ReVanced din fișier sau exportă setările ReVanced în fișier</string>
     <string name="revanced_bottom_player">Partea de jos a playerului</string>
     <string name="revanced_button_container_title">Container buton</string>
     <string name="revanced_bypass_ambient_mode_restrictions_summary_off">Modul ambiental este dezactivat în modul economisire baterie</string>
@@ -43,6 +42,7 @@
     <string name="revanced_comments_title">Comentarii</string>
     <string name="revanced_custom_filter_strings_summary">Filtrează componentele după nume separate de linie</string>
     <string name="revanced_custom_filter_strings_title">Editați filtrul personalizat</string>
+    <string name="revanced_custom_filter_strings_warning">Filtru personalizat invalid, resetare la valorile implicite.</string>
     <string name="revanced_custom_filter_summary_off">Filtrul personalizat este dezactivat</string>
     <string name="revanced_custom_filter_summary_on">Filtrul personalizat este activat</string>
     <string name="revanced_custom_filter_title">Activați filtrul personalizat</string>
@@ -157,8 +157,6 @@
     <string name="revanced_enable_wide_search_bar_summary_on">Bara de căutare largă este activată</string>
     <string name="revanced_enable_wide_search_bar_title">Activează bara de căutare largă</string>
     <string name="revanced_experimental_flag">Optiuni experimentale</string>
-    <string name="revanced_export_settings_summary">Salvează setările ReVanced într-un fișier</string>
-    <string name="revanced_export_settings_title">Exportă setările</string>
     <string name="revanced_external_downloader_installed">Instalat</string>
     <string name="revanced_external_downloader_not_installed">Neinstalat</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s nu este instalat. Vă rugăm să-l instalaţi.</string>

@@ -1,17 +1,16 @@
 package app.revanced.patches.youtube.video.hdr
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
-import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.smali.ExternalLabel
+import app.revanced.patches.youtube.utils.integrations.Constants.VIDEO_PATH
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
 import app.revanced.patches.youtube.video.hdr.fingerprints.HdrCapabilitiesFingerprint
-import app.revanced.util.integrations.Constants.VIDEO_PATH
+import app.revanced.util.exception
 
 @Patch(
     name = "Disable HDR video",
@@ -37,7 +36,9 @@ import app.revanced.util.integrations.Constants.VIDEO_PATH
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -48,22 +49,15 @@ object DisableHdrVideoPatch : BytecodePatch(
 ) {
     override fun execute(context: BytecodeContext) {
 
-        HdrCapabilitiesFingerprint.result?.let {
-            with(
-                context
-                    .toMethodWalker(it.method)
-                    .nextMethod(it.scanResult.patternScanResult!!.endIndex, true)
-                    .getMethod() as MutableMethod
-            ) {
-                addInstructionsWithLabels(
-                    0, """
-                        invoke-static {}, $VIDEO_PATH/HDRVideoPatch;->disableHDRVideo()Z
-                        move-result v0
-                        if-nez v0, :default
-                        return v0
-                        """, ExternalLabel("default", getInstruction(0))
-                )
-            }
+        HdrCapabilitiesFingerprint.result?.mutableMethod?.apply {
+            addInstructionsWithLabels(
+                0, """
+                    invoke-static {}, $VIDEO_PATH/HDRVideoPatch;->disableHDRVideo()Z
+                    move-result v0
+                    if-nez v0, :default
+                    return v0
+                    """, ExternalLabel("default", getInstruction(0))
+            )
         } ?: throw HdrCapabilitiesFingerprint.exception
 
         /**

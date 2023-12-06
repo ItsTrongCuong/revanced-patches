@@ -2,35 +2,34 @@
 <resources>
     <string name="accessibility_settings_edu_opt_in_text">ভিডিও প্লেয়ারের জন্য Accessibility নিয়ন্ত্রণ চালু করবেন?</string>
     <string name="accessibility_settings_edu_opt_out_text">আপনার নিয়ন্ত্রণ পরিবর্তন করা হয়েছে কারণ একটি Accessibility পরিষেবা চালু আছে।</string>
-    <string name="microg_not_installed_notice">অনুগ্রহপূর্বক MicroG ইনস্টল করুন</string>
-    <string name="microg_not_installed_warning">MicroG খুঁজে পাওয়া যায় নি</string>
-    <string name="microg_not_running_warning">MicroG ব্যাকগ্রাউন্ডে চলছে না</string>
-    <string name="microg_settings_summary">বিজ্ঞপ্তি পাওয়ার জন্য ক্লাউড ম্যাসেজিং সেটিং সক্রিয় করুন</string>
+    <string name="microg_not_installed_notice">অনুগ্রহপূর্বক MicroG ইনস্টল করুন।</string>
+    <string name="microg_not_installed_warning">MicroG খুঁজে পাওয়া যায় নি।</string>
+    <string name="microg_not_running_warning">ব্যাকগ্রাউন্ডে MicroG চলছে না।</string>
+    <string name="microg_settings_summary">বিজ্ঞপ্তি পাওয়ার জন্য ক্লাউড ম্যাসেজিং সেটিং সক্রিয় করুন।</string>
     <string name="microg_settings_title">MicroG খুলুন</string>
     <string name="revanced_ads">বিজ্ঞাপন</string>
     <string name="revanced_alt_thumbnails">বিকল্প থাম্বনেইল</string>
     <string name="revanced_alt_thumbnail_about_summary">সংবেদনশীলতা কমাতে ভিডিওর পূর্বনির্ধারিত থাম্বনেইলকে বিকল্প থাম্বনেইল দ্বারা প্রতিস্থাপন করার ফিচার।</string>
     <string name="revanced_alt_thumbnail_about_title">সম্পর্কে</string>
-    <string name="revanced_alt_thumbnail_dearrow_summary_off">বাহিরের API ছাড়াই থাম্বনেইল তৈরি করা হয়েছে</string>
-    <string name="revanced_alt_thumbnail_dearrow_summary_on">DeArrow API ব্যবহার করে থাম্বনেইল তৈরি করা হয়েছে</string>
+    <string name="revanced_alt_thumbnail_dearrow_summary_off">বাহিরের API ছাড়াই থাম্বনেইল তৈরি করা হয়েছে।</string>
+    <string name="revanced_alt_thumbnail_dearrow_summary_on">DeArrow API ব্যবহার করে থাম্বনেইল তৈরি করা হয়েছে।</string>
     <string name="revanced_alt_thumbnail_dearrow_title">DeArrow API ব্যবহার করা হচ্ছে</string>
-    <string name="revanced_alt_thumbnail_enabled_summary_off">মূল YouTube থাম্বনেইল প্রদর্শিত হচ্ছে</string>
-    <string name="revanced_alt_thumbnail_enabled_summary_on">YouTube এর থাম্বনেইল ভিন্ন থাম্বনেইল দ্বারা প্রতিস্থাপন করা হবে</string>
+    <string name="revanced_alt_thumbnail_enabled_summary_off">মূল YouTube থাম্বনেইল প্রদর্শিত হচ্ছে।</string>
+    <string name="revanced_alt_thumbnail_enabled_summary_on">YouTube এর থাম্বনেইল বিকল্প থাম্বনেইল দ্বারা প্রতিস্থাপন করা হবে।</string>
     <string name="revanced_alt_thumbnail_enabled_title">বিকল্প থাম্বনেইল সক্রিয় করুন</string>
-    <string name="revanced_alt_thumbnail_skip_checking_summary_off">প্রতিস্থাপন করার পূর্বে কোন থাম্বনেইল বিদ্যমান আছে কিনা তা যাচাই করা হবে</string>
-    <string name="revanced_alt_thumbnail_skip_checking_summary_on">থাম্বনেইল তাড়াতাড়িই লোড করা হবে, কিন্তু কিছু ভিডিওতে ফাঁকা থাম্বনেইল দেখাতে পারে</string>
+    <string name="revanced_alt_thumbnail_skip_checking_summary_off">প্রতিস্থাপন করার পূর্বে কোন থাম্বনেইল বিদ্যমান আছে কিনা তা যাচাই করা হবে।</string>
+    <string name="revanced_alt_thumbnail_skip_checking_summary_on">থাম্বনেইল তাড়াতাড়িই লোড করা হবে, কিন্তু কিছু ভিডিওতে ফাঁকা থাম্বনেইল দেখাতে পারে।</string>
     <string name="revanced_alt_thumbnail_skip_checking_title">থাম্বনেইল চেক করা এড়িয়ে যান</string>
     <string name="revanced_alt_thumbnail_type_entry_1">ভিডিওর শুরুর অংশ</string>
     <string name="revanced_alt_thumbnail_type_entry_2">ভিডিওর মধ্যাংশ</string>
     <string name="revanced_alt_thumbnail_type_entry_3">ভিডিওর শেষাংশ</string>
     <string name="revanced_alt_thumbnail_type_title">ভিডিওর যে সময় থেকে স্থিরচিত্র নেয়া হবে</string>
-    <string name="revanced_append_time_stamp_information_summary_off">টাইম স্ট্যাম্প তথ্য দেখানো নিষ্ক্রিয় আছে</string>
-    <string name="revanced_append_time_stamp_information_summary_on">টাইম স্ট্যাম্প তথ্য দেখানো সক্রিয় আছে</string>
+    <string name="revanced_append_time_stamp_information_summary_off">টাইম স্ট্যাম্প তথ্য দেখানো নিষ্ক্রিয় আছে।</string>
+    <string name="revanced_append_time_stamp_information_summary_on">টাইম স্ট্যাম্প তথ্য দেখানো সক্রিয় আছে।</string>
     <string name="revanced_append_time_stamp_information_title">টাইম স্ট্যাম্প তথ্য দেখান</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">প্লেব্যাক স্পিড দেখান</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">ভিডিও মান দেখান</string>
     <string name="revanced_append_time_stamp_information_type_title">তথ্যের ধরণ দেখান</string>
-    <string name="revanced_backup_summary">ফাইল থেকে ReVanced সেটিং আমদানী করুন অথবা ReVanced সেটিংস ফাইলে রপ্তানি করুন</string>
     <string name="revanced_bottom_player">প্লেয়ারের এর নিচে</string>
     <string name="revanced_button_container_title">বাটন কনটেইনার</string>
     <string name="revanced_bypass_ambient_mode_restrictions_summary_off">ব্যাটারি সেভার মোডে এম্বিয়েন্ট মোড নিষ্ক্রিয় করা হয়েছে</string>
@@ -40,6 +39,7 @@
     <string name="revanced_change_homepage_summary_on">বর্তমান প্রধান পাতা: সাবস্ক্রিপশন</string>
     <string name="revanced_change_homepage_title">প্রধান পাতা সাবস্ক্রিপশনে পরিবর্তন করুন</string>
     <string name="revanced_channel_bar_title">চ্যানেল ব</string>
+    <string name="revanced_channel_profile_title">প্রোফাইল টাইটেল</string>
     <string name="revanced_comments_title">মন্তব্য</string>
     <string name="revanced_custom_filter_strings_summary">লাইনের মাধ্যমে নামগুলি দ্বারা উপাদানসমূহ ফিল্টার করুন</string>
     <string name="revanced_custom_filter_strings_title">কাস্টম ফিল্টার সম্পাদনা করুন</string>
@@ -171,8 +171,6 @@
 আপনি ট্যাব &gt; চ্যানেল দেখুন &gt; মেনু &gt; সেটিং"</string>
     <string name="revanced_enable_wide_search_bar_in_you_tab_title">আপনি ট্যাবে প্রশস্ত অনুসন্ধান বার সক্রিয় করুন</string>
     <string name="revanced_experimental_flag">পরীক্ষামূলক ফ্ল্যাগ</string>
-    <string name="revanced_export_settings_summary">আপনার ReVanced সেটিং ফাইলে সংরক্ষণ করুন</string>
-    <string name="revanced_export_settings_title">সেটিং রপ্তানি করুন</string>
     <string name="revanced_external_downloader_installed">ইনস্টল করা আছে</string>
     <string name="revanced_external_downloader_not_installed">ইনস্টল করা নেই</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s ইনস্টল করা নেই। অনুগ্রহপূর্বক এটি ইনস্টল করুন।</string>
@@ -406,9 +404,6 @@
     <string name="revanced_hide_place_section_summary_off">ফিচার করা জায়গা প্রদর্শিত হয়েছে</string>
     <string name="revanced_hide_place_section_summary_on">ফিচার করা জায়গা লুকিয়ে রয়েছে</string>
     <string name="revanced_hide_place_section_title">ফিচার করা জায়গা লুকান</string>
-    <string name="revanced_hide_player_button_background_summary_off">প্লেয়ার বাটন ব্যাকগ্রাউন্ড প্রদর্শিত হয়েছে</string>
-    <string name="revanced_hide_player_button_background_summary_on">প্লেয়ার বাটন ব্যাকগ্রাউন্ড লুকিয়ে রয়েছে</string>
-    <string name="revanced_hide_player_button_background_title">প্লেয়ার বাটন ব্যাকগ্রাউন্ড লুকান</string>
     <string name="revanced_hide_player_flyout_panel_ambient_mode_summary_off">অ্যাম্বিয়েন্ট মোড মেনু প্রদর্শিত হয়েছে</string>
     <string name="revanced_hide_player_flyout_panel_ambient_mode_summary_on">অ্যাম্বিয়েন্ট মোড মেনু লুকিয়ে রয়েছে</string>
     <string name="revanced_hide_player_flyout_panel_ambient_mode_title">অ্যাম্বিয়েন্ট মোড মেনু লুকান</string>
@@ -575,8 +570,6 @@
     <string name="revanced_hook_download_button_summary">"ডাউনলোড করুন বাটনকে বাইরের ডাউনলোড বাটন দ্বারা প্রতিস্থাপন করুন
 শুধুমাত্র YouTube ১৮.২৪.৩৪+ সংস্করণ এর জন্য প্রযোজ্য"</string>
     <string name="revanced_hook_download_button_title">ডাউনলোড বাটন হুক করুন</string>
-    <string name="revanced_import_settings_summary">সংরক্ষিত ফাইল থেকে ReVanced সেটিং আনুন</string>
-    <string name="revanced_import_settings_title">সেটিং আমদানি করুন</string>
     <string name="revanced_layout_title">লেআউট</string>
     <string name="revanced_misc">বিবিধ</string>
     <string name="revanced_navigation">নেভিগেশন</string>
@@ -585,8 +578,6 @@
     <string name="revanced_open_library_you_startup_title">লাইব্রেরি (আপনি) অ্যাপের শুরুতে খুলুন</string>
     <string name="revanced_others">অন্যান্য</string>
     <string name="revanced_overlay_button">ওভারলে বাটন</string>
-    <string name="revanced_overlay_button_always_repeat_summary">"সর্বদা পুনরাবৃত্তি অবস্থা পরিবর্তন করতে ট্যাপ করুন
-পুনরাবৃত্তি অবস্থা পরে বিরতি পরিবর্তন করতে ট্যাপ করে ধরে রাখুন"</string>
     <string name="revanced_overlay_button_always_repeat_title">সর্বদা পুনরাবৃত্তি বাটন দেখান</string>
     <string name="revanced_overlay_button_copy_video_url_summary">"ভিডিও URL অনুলিপি করতে ট্যাপ করুন
 ভিডিওর টাইমস্ট্যাম্প সহ ভিডিও URL অনুলিপি করতে ট্যাপ করে ধরে রাখুন"</string>
@@ -605,7 +596,6 @@
     <string name="revanced_player">প্লেয়ার</string>
     <string name="revanced_player_flyout_panel_title">প্লেয়ার ফ্লাইআউট প্যানেল</string>
     <string name="revanced_quick_actions_title">কুইক অ্যাকশন</string>
-    <string name="revanced_reboot_first_run">লেআউটটি স্বাভাবিকভাবে লোড করতে পুনরায় চালু করুন</string>
     <string name="revanced_ryd_about">সম্পর্কে</string>
     <string name="revanced_ryd_attribution_summary">অপছন্দের তথ্য প্রদান করা হয় Return YouTube Dislike API দ্বারা। আরও জানতে আলতো চাপুন।</string>
     <string name="revanced_ryd_compact_layout_summary_off">পছন্দ বাটন সেরা চেহারার জন্য সাজানো হয়েছে</string>
@@ -619,7 +609,6 @@
     <string name="revanced_ryd_enable_title">ইউটিউবের ডিসলাইক ফেরানো সক্রিয় করুন</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">অপছন্দ পাওয়া যাচ্ছে না (ক্লায়েন্ট API সীমা পৌঁছেছে)</string>
     <string name="revanced_ryd_shorts_summary_off">শর্টসে ডিজলাইক লুকিয়ে রয়েছে</string>
-    <string name="revanced_ryd_shorts_summary_on">শর্টসে ডিজলাইক প্রদর্শিত হয়েছে</string>
     <string name="revanced_ryd_shorts_title">শর্টসে ডিজলাইক দেখান</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">লুকিয়ে রয়েছে</string>
     <string name="revanced_save_video_quality_none">গুণমান সেট করতে ব্যর্থ হয়েছে</string>
@@ -642,7 +631,6 @@
 
 এটি অ্যাপের চেহারাটি পরিবর্তন করবে, কিন্তু অজানা পার্শ্বপ্রতিক্রিয়া দেখা দিতে পারে
 পরবর্তীতে এটি বন্ধ করা হলে, অ্যাপ ডেটা সাফ করা না করা পর্যন্ত পুরানো ইউআই থাকতে পারে"</string>
-    <string name="revanced_spoof_app_version_target_entry_16_08_35">১৬.০৮.৩৫ - ঘুরে দেখুন ট্যাব পুনরুদ্ধার করে</string>
     <string name="revanced_spoof_app_version_target_entry_17_08_35">১৭.০৮.৩৫ পুরোনো ইউআই লেআউট পুনরুদ্ধার করে</string>
     <string name="revanced_spoof_app_version_target_entry_17_41_37">১৭.৪১.৩৭ - পুরোনো প্লেলিস্ট শেল্প পুনরুদ্ধার করে</string>
     <string name="revanced_spoof_app_version_target_entry_18_01_38">"১৮.০১.৩৮ - 'সদস্যদের দ্বারা মন্তব্য' ব্যানার অপসারণ করে"</string>
@@ -681,7 +669,6 @@
     <string name="revanced_swipe_overlay_text_size_title">সোয়াইপ ওভারলে টেক্সট সাইজ</string>
     <string name="revanced_swipe_overlay_timeout_summary">কত মিলিসেকেন্ডের জন্য ওভারলে দৃশ্যমান হবে</string>
     <string name="revanced_swipe_overlay_timeout_title">সোয়াইপ ওভারলে টাইমআউট</string>
-    <string name="revanced_switching_create_notification_summary">বি:দ্র: যদি সেটিং সঠিকভাবে প্রয়োগ না হয়, ফোন রিবুট করুন</string>
     <string name="revanced_switching_create_notification_title">তৈরি বাটনকে বিজ্ঞপ্তিসমূহের বাটনের সাথে সুইচ করুন</string>
     <string name="revanced_tool_used">ব্যবহৃত টুল</string>
     <string name="revanced_video">ভিডিও</string>
@@ -733,12 +720,9 @@
     <string name="sb_api_url_invalid">API URL টি ভুল</string>
     <string name="sb_api_url_changed">API URL পরিবর্তন হয়েছে</string>
     <string name="sb_settings_copy">কপি করুন</string>
-    <string name="sb_settings_ie_sum">এটি আপনার একটি SponsorBlock JSON কনফিগারেশন যা ReVanced এবং অন্যান্য SponsorBlock প্ল্যাটফর্মে ইমপোর্ট / এক্সপোর্ট করা যেতে পারে। এটিতে আপনার ব্যক্তিগত ব্যবহারকারী আইডিও রয়েছে। এটি কোথাও শেয়ার করার সময় বিবেচনা করে করবেন</string>
     <string name="sb_settings_import_successful">সেটিং সফলভাবে আমদানি করা হয়েছে</string>
     <string name="sb_settings_import_failed">%s আমদানি করতে ব্যর্থ হয়েছে</string>
     <string name="sb_settings_export_failed">%s রপ্তানি করতে ব্যর্থ হয়েছে</string>
-    <string name="sb_settings_revanced_export_user_id_warning">আপনার সেটিংএ একটি প্রাইভেট SponsorBlock ব্যবহারকারী আইডি রয়েছে।\n\nআপনার ব্যবহারকারী আইডি অনেকটা পাসওয়ার্ডের মতো তাই এটি কখনোই শেয়ার করা উচিত নয়।\n</string>
-    <string name="sb_settings_revanced_export_user_id_warning_dismiss">পুনরায় দেখাবেন না</string>
     <string name="sb_diff_segments">সেগমেন্ট আচরণ পরিবর্তন করুন</string>
     <string name="sb_segments_sponsor">স্পন্সর</string>
     <string name="sb_segments_sponsor_sum">পেইড প্রমোশন, পেইড রেফারেল এবং সরাসরি বিজ্ঞাপন। নিজের পছন্দসই কারণ/স্রষ্টা/ওয়েবসাইট/পণ্যগুলিতে স্ব-প্রচার বা বিনামূল্যে প্রচারের জন্য নয়।</string>
@@ -843,9 +827,4 @@
     <string name="sb_about">সম্পর্কে</string>
     <string name="sb_reset">আবার সেট</string>
     <string name="sb_about_api_sum">ডেটা SponsorBlock API দ্বারা সরবরাহ করা হয়। আরও জানতে এবং অন্যান্য প্ল্যাটফর্মের ডাউনলোড দেখতে এখানে ট্যাপ করুন</string>
-    <string name="settings_export_failed">সেটিং রপ্তানি করতে ব্যর্থ হয়েছে</string>
-    <string name="settings_export_successful">সেটিং সফলভাবে রপ্তানি করা হয়েছে</string>
-    <string name="settings_ie">সেটিং আমদানী/রপ্তানি</string>
-    <string name="settings_import_failed">সেটিং আমদানি করতে ব্যর্থ</string>
-    <string name="settings_import_successful">সেটিং সফলভাবে আমদানি করা হয়েছে</string>
 </resources>

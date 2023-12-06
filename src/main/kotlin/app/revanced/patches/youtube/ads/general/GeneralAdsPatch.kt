@@ -1,7 +1,5 @@
 package app.revanced.patches.youtube.ads.general
 
-import app.revanced.extensions.doRecursively
-import app.revanced.extensions.startsWithAny
 import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
@@ -9,10 +7,12 @@ import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.youtube.ads.getpremium.HideGetPremiumPatch
 import app.revanced.patches.youtube.utils.fix.doublebacktoclose.DoubleBackToClosePatch
 import app.revanced.patches.youtube.utils.fix.swiperefresh.SwipeRefreshPatch
+import app.revanced.patches.youtube.utils.integrations.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.litho.LithoFilterPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.COMPONENTS_PATH
-import app.revanced.util.resources.ResourceUtils.copyXmlNode
+import app.revanced.util.copyXmlNode
+import app.revanced.util.doRecursively
+import app.revanced.util.startsWithAny
 import org.w3c.dom.Element
 
 @Patch(
@@ -46,7 +46,9 @@ import org.w3c.dom.Element
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
@@ -76,6 +78,7 @@ object GeneralAdsPatch : ResourcePatch() {
 
     override fun execute(context: ResourceContext) {
         LithoFilterPatch.addFilter("$COMPONENTS_PATH/AdsFilter;")
+        LithoFilterPatch.addFilter("$COMPONENTS_PATH/InterstitialBannerFilter;")
 
         context.forEach {
 

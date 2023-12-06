@@ -1,6 +1,5 @@
 package app.revanced.patches.music.general.categorybar
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -8,10 +7,11 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.music.general.categorybar.fingerprints.ChipCloudFingerprint
+import app.revanced.patches.music.utils.integrations.Constants.GENERAL
 import app.revanced.patches.music.utils.resourceid.SharedResourceIdPatch
+import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.SettingsPatch
-import app.revanced.util.enum.CategoryType
-import app.revanced.util.integrations.Constants.MUSIC_GENERAL
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Patch(
@@ -21,17 +21,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
         SettingsPatch::class,
         SharedResourceIdPatch::class
     ],
-    compatiblePackages = [
-        CompatiblePackage(
-            "com.google.android.apps.youtube.music",
-            [
-                "6.15.52",
-                "6.20.51",
-                "6.26.51",
-                "6.27.53"
-            ]
-        )
-    ]
+    compatiblePackages = [CompatiblePackage("com.google.android.apps.youtube.music")]
 )
 @Suppress("unused")
 object CategoryBarPatch : BytecodePatch(
@@ -45,7 +35,7 @@ object CategoryBarPatch : BytecodePatch(
 
                 addInstruction(
                     targetIndex + 1,
-                    "invoke-static { v$targetRegister }, $MUSIC_GENERAL->hideCategoryBar(Landroid/view/View;)V"
+                    "invoke-static { v$targetRegister }, $GENERAL->hideCategoryBar(Landroid/view/View;)V"
                 )
             }
         } ?: throw ChipCloudFingerprint.exception

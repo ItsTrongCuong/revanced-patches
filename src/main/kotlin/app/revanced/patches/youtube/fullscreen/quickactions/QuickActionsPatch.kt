@@ -4,10 +4,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import app.revanced.patches.youtube.utils.integrations.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.litho.LithoFilterPatch
 import app.revanced.patches.youtube.utils.quickactions.QuickActionsHookPatch
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.COMPONENTS_PATH
 
 @Patch(
     name = "Quick actions components",
@@ -37,13 +37,15 @@ import app.revanced.util.integrations.Constants.COMPONENTS_PATH
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]
 )
 @Suppress("unused")
-object QuickActionsPatch : BytecodePatch() {
+object QuickActionsPatch : BytecodePatch(emptySet()) {
     override fun execute(context: BytecodeContext) {
         LithoFilterPatch.addFilter("$COMPONENTS_PATH/QuickActionFilter;")
 

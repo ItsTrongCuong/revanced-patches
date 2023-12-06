@@ -1,14 +1,14 @@
 package app.revanced.patches.youtube.general.musicsearch
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.youtube.general.musicsearch.fingerprints.VoiceSearchConfigFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.GENERAL
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.GENERAL
+import app.revanced.util.exception
 
 @Patch(
     name = "Enable music search",
@@ -31,7 +31,9 @@ import app.revanced.util.integrations.Constants.GENERAL
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ],

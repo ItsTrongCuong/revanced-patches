@@ -6,8 +6,8 @@ import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patcher.patch.options.PatchOption.PatchExtensions.stringPatchOption
+import app.revanced.patches.youtube.utils.settings.ResourceUtils.updatePatchStatusLabel
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.resources.ResourceHelper.updatePatchStatusLabel
 
 @Patch(
     name = "Custom branding name YouTube",
@@ -36,7 +36,9 @@ import app.revanced.util.resources.ResourceHelper.updatePatchStatusLabel
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]

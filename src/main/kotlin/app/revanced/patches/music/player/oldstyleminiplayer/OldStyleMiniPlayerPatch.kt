@@ -1,6 +1,5 @@
 package app.revanced.patches.music.player.oldstyleminiplayer
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -10,26 +9,17 @@ import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.music.player.oldstyleminiplayer.fingerprints.NextButtonVisibilityFingerprint
 import app.revanced.patches.music.player.oldstyleminiplayer.fingerprints.SwipeToCloseFingerprint
 import app.revanced.patches.music.utils.fingerprints.PlayerColorFingerprint
+import app.revanced.patches.music.utils.integrations.Constants.PLAYER
+import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.SettingsPatch
-import app.revanced.util.enum.CategoryType
-import app.revanced.util.integrations.Constants.MUSIC_PLAYER
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Patch(
     name = "Enable old style miniplayer",
     description = "Return the miniplayers to old style.",
     dependencies = [SettingsPatch::class],
-    compatiblePackages = [
-        CompatiblePackage(
-            "com.google.android.apps.youtube.music",
-            [
-                "6.15.52",
-                "6.20.51",
-                "6.26.51",
-                "6.27.53"
-            ]
-        )
-    ]
+    compatiblePackages = [CompatiblePackage("com.google.android.apps.youtube.music")]
 )
 @Suppress("unused")
 object OldStyleMiniPlayerPatch : BytecodePatch(
@@ -54,7 +44,7 @@ object OldStyleMiniPlayerPatch : BytecodePatch(
 
                     addInstructions(
                         targetIndex + 1, """
-                            invoke-static {v$targetRegister}, $MUSIC_PLAYER->enableOldStyleMiniPlayer(Z)Z
+                            invoke-static {v$targetRegister}, $PLAYER->enableOldStyleMiniPlayer(Z)Z
                             move-result v$targetRegister
                             """
                     )
@@ -69,7 +59,7 @@ object OldStyleMiniPlayerPatch : BytecodePatch(
 
                 addInstructions(
                     insertIndex, """
-                        invoke-static {v$targetRegister}, $MUSIC_PLAYER->enableOldStyleMiniPlayer(Z)Z
+                        invoke-static {v$targetRegister}, $PLAYER->enableOldStyleMiniPlayer(Z)Z
                         move-result v$targetRegister
                         """
                 )

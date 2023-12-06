@@ -1,14 +1,14 @@
 package app.revanced.patches.youtube.misc.spoofdimensions
 
-import app.revanced.extensions.exception
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.youtube.misc.spoofdimensions.fingerprints.DeviceDimensionsModelToStringFingerprint
+import app.revanced.patches.youtube.utils.integrations.Constants.MISC_PATH
 import app.revanced.patches.youtube.utils.settings.SettingsPatch
-import app.revanced.util.integrations.Constants.MISC_PATH
+import app.revanced.util.exception
 import com.android.tools.smali.dexlib2.util.MethodUtil
 
 @Patch(
@@ -36,7 +36,9 @@ import com.android.tools.smali.dexlib2.util.MethodUtil
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ]

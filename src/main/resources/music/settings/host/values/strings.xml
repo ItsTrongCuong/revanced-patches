@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="microg_not_installed_notice">Please install MicroG.</string>
+    <string name="microg_not_installed_warning">MicroG is not found.</string>
+    <string name="microg_not_running_warning">MicroG does not run in the background.</string>
+    <string name="microg_settings_summary">Enable cloud messaging settings to receive notifications.</string>
+    <string name="microg_settings_title">Open MicroG</string>
+
     <string name="revanced_category_account">Account</string>
     <string name="revanced_category_action_bar">Action Bar</string>
     <string name="revanced_category_ads">Ads</string>
@@ -9,6 +15,9 @@
     <string name="revanced_category_navigation">Navigation</string>
     <string name="revanced_category_player">Player</string>
     <string name="revanced_category_video">Video</string>
+    <string name="revanced_close_interstitial_ads_summary">Automatically close interstitial ads.</string>
+    <string name="revanced_close_interstitial_ads_title">Close interstitial ads</string>
+    <string name="revanced_close_interstitial_ads_toast">Closing interstitial ads.</string>
     <string name="revanced_custom_filter_strings_summary">Filter component names by line-seperated.</string>
     <string name="revanced_custom_filter_strings_title">Edit custom filter</string>
     <string name="revanced_custom_filter_strings_warning">Invalid custom filter, resetting to default.</string>
@@ -60,11 +69,16 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_enable_sleep_timer_title">Enable sleep timer</string>
     <string name="revanced_enable_zen_mode_summary">Adds a grey tint to the video player to reduce eye strain.</string>
     <string name="revanced_enable_zen_mode_title">Enable zen mode</string>
+    <string name="revanced_extended_settings_export_as_file">Export settings to file</string>
+    <string name="revanced_extended_settings_export_failed">Failed to export settings.</string>
+    <string name="revanced_extended_settings_export_success">Settings were successfully exported.</string>
     <string name="revanced_extended_settings_import">Import</string>
+    <string name="revanced_extended_settings_import_as_file">Import settings from file</string>
     <string name="revanced_extended_settings_import_copy">Copy</string>
-    <string name="revanced_extended_settings_import_export_summary">Import or export settings as text.</string>
-    <string name="revanced_extended_settings_import_export_title">Import / Export</string>
-    <string name="revanced_extended_settings_import_failure_parse">Import failed: %s.</string>
+    <string name="revanced_extended_settings_import_export_as_text">Import / Export settings as text</string>
+    <string name="revanced_extended_settings_import_export_summary">Import or export settings.</string>
+    <string name="revanced_extended_settings_import_export_title">Import / Export settings</string>
+    <string name="revanced_extended_settings_import_failed">Import failed: %s.</string>
     <string name="revanced_extended_settings_import_reset">Settings reset to default.</string>
     <string name="revanced_extended_settings_import_success">Imported %d settings.</string>
     <string name="revanced_external_downloader_not_installed_warning" formatted="false">%s is not installed. Please install it.</string>
@@ -105,6 +119,7 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_hide_flyout_panel_like_dislike_title">Hide like and dislike button</string>
     <string name="revanced_hide_flyout_panel_play_next_title">Hide play next menu</string>
     <string name="revanced_hide_flyout_panel_remove_from_library_title">Hide remove from library menu</string>
+    <string name="revanced_hide_flyout_panel_remove_from_playlist_title">Hide remove from playlist menu</string>
     <string name="revanced_hide_flyout_panel_report_title">Hide report menu</string>
     <string name="revanced_hide_flyout_panel_save_episode_for_later_title">Hide save episode for later menu</string>
     <string name="revanced_hide_flyout_panel_save_to_library_title">Hide save to library menu</string>
@@ -112,8 +127,12 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_hide_flyout_panel_share_title">Hide share menu</string>
     <string name="revanced_hide_flyout_panel_start_radio_title">Hide start radio menu</string>
     <string name="revanced_hide_flyout_panel_view_song_credit_title">Hide view song credit menu</string>
+    <string name="revanced_hide_general_ads_summary">Hides general ads.</string>
+    <string name="revanced_hide_general_ads_title">Hide general ads</string>
     <string name="revanced_hide_handle_summary">Hides the handle in the account switcher.</string>
     <string name="revanced_hide_handle_title">Hide handle</string>
+    <string name="revanced_hide_history_button_summary">Hides history button in toolbar.</string>
+    <string name="revanced_hide_history_button_title">Hide history button</string>
     <string name="revanced_hide_home_button_summary">Hides the home button.</string>
     <string name="revanced_hide_home_button_title">Hide home button</string>
     <string name="revanced_hide_library_button_summary">Hides the library button.</string>
@@ -128,6 +147,10 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_hide_new_playlist_button_title">Hide new playlist button</string>
     <string name="revanced_hide_playlist_card_summary">Hides the playlist card from homepage.</string>
     <string name="revanced_hide_playlist_card_title">Hide playlist card</string>
+    <string name="revanced_hide_premium_promotion_summary">Hides premium promotion popup.</string>
+    <string name="revanced_hide_premium_promotion_title">Hide premium promotion popup</string>
+    <string name="revanced_hide_premium_renewal_summary">Hides premium renewal banner.</string>
+    <string name="revanced_hide_premium_renewal_title">Hide premium renewal banner</string>
     <string name="revanced_hide_samples_button_summary">Hides the samples button.</string>
     <string name="revanced_hide_samples_button_title">Hide samples button</string>
     <string name="revanced_hide_terms_container_summary">Hides terms of service container.</string>
@@ -139,8 +162,8 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_playlist_dismiss">Already playing official music source.</string>
     <string name="revanced_playlist_error">Official music source not available.</string>
-    <string name="revanced_reboot_first_run">Restart to load the layout normally</string>
-    <string name="revanced_reboot_message">Refresh and restart</string>
+    <string name="revanced_restart_first_run">Restart to load the layout normally</string>
+    <string name="revanced_restart_message">Refresh and restart</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_summary">When watching on YouTube, continue watching from the current time.</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_continue_watch_title">Continue watching</string>
     <string name="revanced_replace_flyout_panel_dismiss_queue_summary">Replaces dismiss queue menu to watch on YouTube.</string>
@@ -158,7 +181,12 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="revanced_ryd_dislike_percentage_summary">Instead of the number of dislikes, the percentage of dislikes is shown.</string>
     <string name="revanced_ryd_dislike_percentage_title">Dislikes as percentage</string>
     <string name="revanced_ryd_enabled_summary">Shows the dislike count of videos.</string>
+    <string name="revanced_ryd_failure_connection_timeout">Dislikes temporarily not available (API timed out).</string>
+    <string name="revanced_ryd_failure_connection_status_code" formatted="false">Dislikes not available (status %d).</string>
     <string name="revanced_ryd_failure_client_rate_limit_requested">Dislikes not available (client API limit reached).</string>
+    <string name="revanced_ryd_failure_generic">Dislikes not available (%s).</string>
+    <string name="revanced_ryd_toast_on_connection_error_summary">Toast shown if ReturnYouTubeDislike API is not available.</string>
+    <string name="revanced_ryd_toast_on_connection_error_title">Show a toast if API is not available</string>
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Hidden</string>
     <string name="revanced_sanitize_sharing_links_summary">Removes tracking query parameters from the URLs when sharing links.</string>
     <string name="revanced_sanitize_sharing_links_title">Sanitize sharing links</string>
@@ -186,6 +214,9 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
 
     <string name="sb_enabled">Enable SponsorBlock</string>
     <string name="sb_enabled_sum">SponsorBlock is a crowd-sourced system for skipping annoying parts of YouTube videos.</string>
+
+    <string name="sb_toast_on_connection_error">Show a toast if API is not available</string>
+    <string name="sb_toast_on_connection_error_sum">Toast shown if SponsorBlock API is not available.</string>
 
     <string name="sb_toast_on_skip">Show a toast when skipping automatically</string>
     <string name="sb_toast_on_skip_sum">Toast shown when a segment is automatically skipped.</string>
@@ -229,6 +260,10 @@ WARNING: Do not enable new player backgrounds while this is enabled."</string>
     <string name="sb_skipped_multiple_segments">Skipped multiple segments.</string>
     <string name="sb_skip_automatically">Skip automatically</string>
     <string name="sb_skip_ignore">Disable</string>
+
+    <string name="sb_sponsorblock_connection_failure_generic">SponsorBlock temporarily not available.</string>
+    <string name="sb_sponsorblock_connection_failure_status" formatted="false">SponsorBlock temporarily not available (status %d).</string>
+    <string name="sb_sponsorblock_connection_failure_timeout">SponsorBlock temporarily not available (API timed out).</string>
 
     <string name="sb_color_dot_label">Color:</string>
     <string name="sb_color_changed">Color changed.</string>

@@ -4,10 +4,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import app.revanced.patches.music.utils.integrations.Constants.COMPONENTS_PATH
 import app.revanced.patches.music.utils.litho.LithoFilterPatch
+import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.SettingsPatch
-import app.revanced.util.enum.CategoryType
-import app.revanced.util.integrations.Constants.MUSIC_COMPONENTS_PATH
 
 @Patch(
     name = "Enable custom filter",
@@ -16,20 +16,10 @@ import app.revanced.util.integrations.Constants.MUSIC_COMPONENTS_PATH
         LithoFilterPatch::class,
         SettingsPatch::class
     ],
-    compatiblePackages = [
-        CompatiblePackage(
-            "com.google.android.apps.youtube.music",
-            [
-                "6.15.52",
-                "6.20.51",
-                "6.26.51",
-                "6.27.53"
-            ]
-        )
-    ]
+    compatiblePackages = [CompatiblePackage("com.google.android.apps.youtube.music")]
 )
 @Suppress("unused")
-object CustomFilterPatch : BytecodePatch() {
+object CustomFilterPatch : BytecodePatch(emptySet()) {
     override fun execute(context: BytecodeContext) {
 
         SettingsPatch.addMusicPreference(
@@ -48,5 +38,5 @@ object CustomFilterPatch : BytecodePatch() {
     }
 
     private const val FILTER_CLASS_DESCRIPTOR =
-        "$MUSIC_COMPONENTS_PATH/CustomFilter;"
+        "$COMPONENTS_PATH/CustomFilter;"
 }

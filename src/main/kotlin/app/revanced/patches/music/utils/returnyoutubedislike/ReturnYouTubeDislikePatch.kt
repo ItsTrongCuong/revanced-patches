@@ -4,9 +4,9 @@ import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import app.revanced.patches.music.utils.settings.ResourceUtils.RETURN_YOUTUBE_DISLIKE_SETTINGS_KEY
+import app.revanced.patches.music.utils.settings.ResourceUtils.addReVancedMusicPreference
 import app.revanced.patches.music.utils.settings.SettingsPatch
-import app.revanced.util.resources.MusicResourceHelper.RETURN_YOUTUBE_DISLIKE_SETTINGS_KEY
-import app.revanced.util.resources.MusicResourceHelper.addReVancedMusicPreference
 import org.w3c.dom.Element
 import org.w3c.dom.Node
 
@@ -17,17 +17,7 @@ import org.w3c.dom.Node
         ReturnYouTubeDislikeBytecodePatch::class,
         SettingsPatch::class
     ],
-    compatiblePackages = [
-        CompatiblePackage(
-            "com.google.android.apps.youtube.music",
-            [
-                "6.15.52",
-                "6.20.51",
-                "6.26.51",
-                "6.27.53"
-            ]
-        )
-    ]
+    compatiblePackages = [CompatiblePackage("com.google.android.apps.youtube.music")]
 )
 @Suppress("unused")
 object ReturnYouTubeDislikePatch : ResourcePatch() {
@@ -41,12 +31,17 @@ object ReturnYouTubeDislikePatch : ResourcePatch() {
             "revanced_ryd_enabled"
         )
         context.addSwitchPreference("revanced_ryd_compact_layout", "false", "revanced_ryd_enabled")
+        context.addSwitchPreference(
+            "revanced_ryd_toast_on_connection_error",
+            "true",
+            "revanced_ryd_enabled"
+        )
         context.addPreferenceCategory("revanced_ryd_about")
         context.addAboutPreference("revanced_ryd_attribution")
 
     }
 
-    private const val YOUTUBE_MUSIC_SETTINGS_PATH = "res/xml/settings_headers.xml"
+    private const val YOUTUBE_SETTINGS_PATH = "res/xml/settings_headers.xml"
     private const val SWITCH_PREFERENCE_TAG_NAME =
         "com.google.android.apps.youtube.music.ui.preference.SwitchCompatPreference"
     private const val PREFERENCE_CATEGORY_TAG_NAME =
@@ -61,7 +56,7 @@ object ReturnYouTubeDislikePatch : ResourcePatch() {
     private fun ResourceContext.addAboutPreference(
         key: String
     ) {
-        this.xmlEditor[YOUTUBE_MUSIC_SETTINGS_PATH].use { editor ->
+        this.xmlEditor[YOUTUBE_SETTINGS_PATH].use { editor ->
             val tags = editor.file.getElementsByTagName(PREFERENCE_CATEGORY_TAG_NAME)
             List(tags.length) { tags.item(it) as Element }
                 .filter { it.getAttribute("android:key").contains("revanced_ryd_about") }
@@ -82,7 +77,7 @@ object ReturnYouTubeDislikePatch : ResourcePatch() {
     private fun ResourceContext.addPreferenceCategory(
         category: String
     ) {
-        this.xmlEditor[YOUTUBE_MUSIC_SETTINGS_PATH].use { editor ->
+        this.xmlEditor[YOUTUBE_SETTINGS_PATH].use { editor ->
             val tags = editor.file.getElementsByTagName("PreferenceScreen")
             List(tags.length) { tags.item(it) as Element }
                 .filter {
@@ -109,7 +104,7 @@ object ReturnYouTubeDislikePatch : ResourcePatch() {
         defaultValue: String,
         dependencyKey: String
     ) {
-        this.xmlEditor[YOUTUBE_MUSIC_SETTINGS_PATH].use { editor ->
+        this.xmlEditor[YOUTUBE_SETTINGS_PATH].use { editor ->
             val tags = editor.file.getElementsByTagName("PreferenceScreen")
             List(tags.length) { tags.item(it) as Element }
                 .filter {

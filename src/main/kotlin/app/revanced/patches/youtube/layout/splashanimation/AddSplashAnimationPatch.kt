@@ -4,9 +4,9 @@ import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
-import app.revanced.util.resources.ResourceUtils
-import app.revanced.util.resources.ResourceUtils.copyResources
-import app.revanced.util.resources.ResourceUtils.copyXmlNode
+import app.revanced.util.ResourceGroup
+import app.revanced.util.copyResources
+import app.revanced.util.copyXmlNode
 import kotlin.io.path.exists
 
 @Patch(
@@ -32,7 +32,9 @@ import kotlin.io.path.exists
                 "18.40.34",
                 "18.41.39",
                 "18.42.41",
-                "18.43.45"
+                "18.43.45",
+                "18.44.41",
+                "18.45.43"
             ]
         )
     ],
@@ -55,7 +57,7 @@ object AddSplashAnimationPatch : ResourcePatch() {
              * extract from YouTube v18.18.39
              */
             arrayOf(
-                ResourceUtils.ResourceGroup(
+                ResourceGroup(
                     "drawable",
                     "\$\$avd_anim__1__0.xml",
                     "\$\$avd_anim__1__1.xml",
